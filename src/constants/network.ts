@@ -7,7 +7,7 @@ export type WebsiteNetworkConfig = {
 
 export const BackEndNetWorkMap: Record<string, WebsiteNetworkConfig> = {
   ECOEARN: {
-    dev:{
+    dev: {
       cmsUrl: '',
       s3Url: '',
     },

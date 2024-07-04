@@ -215,6 +215,9 @@ const formatModule = (moduleItem: any): Module | undefined => {
         title: {
           text: moduleItem.title,
         },
+        subTitle: {
+          text: moduleItem.subTitle,
+        },
         list: formatPartnerList(moduleItem.list),
         commonStyles: {
           paddingTop: moduleItem.paddingTop || undefined,
