@@ -1,12 +1,12 @@
+'use client';
 import { NavigationType, ROUTER } from '@/constants/enum';
-import router from 'next/router';
 
 export function jumpOrScrollToTop(path: ROUTER, callback?: () => void): void {
-  if (path === router.pathname) {
+  if (path === location.pathname) {
     window.scrollTo(0, 0);
     callback?.();
   } else {
-    router.push(path);
+    window.open(path, '_self');
   }
 }
 

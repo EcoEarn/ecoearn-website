@@ -7,6 +7,9 @@ export interface IPartnersModule {
   title?: {
     text: string;
   };
+  subTitle?: {
+    text: string;
+  };
   list?: Array<IPartnerItem>;
   commonStyles: {
     paddingTop?: string;
