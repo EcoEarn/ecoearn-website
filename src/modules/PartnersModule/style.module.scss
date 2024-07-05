@@ -1,4 +1,6 @@
 /* stylelint-disable selector-class-pattern */
+@import '/src/assets/theme/color.scss';
+
 .partnersModuleWrap {
   display: flex;
   align-items: center;
@@ -16,6 +18,15 @@
   font-size: 40px;
   font-weight: 700;
   line-height: 48px;
+}
+
+.sectionDesc {
+  color: $secondary-text;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 26px;
 }
 
 .partnersList {
@@ -37,6 +48,9 @@
   border-radius: 8px;
   border: 1px solid var(--border);
   cursor: pointer;
+  &:hover{
+    border-color: $brand;
+  }
 }
 
 .cardImg {
