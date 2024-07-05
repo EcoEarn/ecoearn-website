@@ -10,7 +10,7 @@ interface IPartnersModuleProps {
 }
 
 export default function PartnersModule({ module }: IPartnersModuleProps) {
-  const { title, list, commonStyles } = module;
+  const { title, list, commonStyles, subTitle } = module;
   const { getVertical } = useGetVertical();
   return (
     <section
@@ -21,6 +21,7 @@ export default function PartnersModule({ module }: IPartnersModuleProps) {
       }}>
       <section className={styles.content}>
         <h1 className={styles.sectionTitle}>{title?.text}</h1>
+        <h3 className={styles.sectionDesc}>{subTitle?.text}</h3>
         <div className={styles.partnersList}>
           {list?.map((item, index) => {
             return (
