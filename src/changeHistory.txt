@@ -1,3 +1,4 @@
 20240705 14:12 add active social icon
 20240806 15:25 replace cms testnet url
 20240812 16:50 add discord social icon
+20240815 15:46 replace discord url
