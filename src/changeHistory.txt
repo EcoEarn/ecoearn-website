@@ -2,3 +2,4 @@
 20240806 15:25 replace cms testnet url
 20240812 16:50 add discord social icon
 20240815 15:46 replace discord url
+20240912 04:29 replace header footer to new staking page
