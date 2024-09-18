@@ -5,3 +5,4 @@
 20240912 04:29 replace header footer to new staking page
 20240912 10:42 update cms
 20240915 15:28 replace logo and rewards pic
+20240918 09:42 update cms footer
