@@ -7,3 +7,4 @@
 20240915 15:28 replace logo and rewards pic
 20240918 09:42 update cms footer
 20241009 15:32 remove discord
+20241010 13:52 replace terms of service url
