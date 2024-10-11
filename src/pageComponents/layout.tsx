@@ -12,8 +12,6 @@ type IProps = Pick<IHomePageProps, 'headerData' | 'footerData'>;
 export default function Layout(props: React.PropsWithChildren<IProps>) {
   const { headerData, footerData, children } = props;
 
-  console.log(footerData);
-
   const setGlobalConfig = useCallback(async () => {
     if (typeof document !== 'undefined') {
       const globalConfig = await getGlobalConfig();
