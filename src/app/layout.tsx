@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import '@/styles/globals.scss';
 import { getGlobalConfig } from '@/api/utils';
 import { GoogleAnalytics } from '@next/third-parties/google';
+import Layout from '@/pageComponents/layout';
+import { getFooter, getHeader } from '@/api/utils';
 
 export async function generateMetadata(): Promise<Metadata> {
   const globalConfig = await getGlobalConfig();
@@ -13,12 +15,19 @@ export async function generateMetadata(): Promise<Metadata> {
   };
 }
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  const headerData = await getHeader();
+  const footerData = await getFooter();
+
   const env = process.env.NEXT_PUBLIC_NETWORK_ENV;
   const googleAnalyticsId = env === 'mainnet' ? process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || '' : '';
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <Layout headerData={headerData} footerData={footerData}>
+          {children}
+        </Layout>
+      </body>
       {googleAnalyticsId && <GoogleAnalytics gaId={googleAnalyticsId} />}
     </html>
   );
