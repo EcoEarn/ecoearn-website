@@ -1,7 +1,4 @@
 'use client';
-import NavFooter from '@/components/NavFooter';
-import NavHeader from '@/components/NavHeader';
-import { ROUTER } from '@/constants/enum';
 import { useUserAgent } from '@/hooks/useUserAgent';
 import BrandModule from '@/modules/BrandModule';
 import { IHomePageProps } from '@/types/pages/home';
@@ -16,7 +13,9 @@ import FeatureCardModule from '@/modules/FeatureCardModule';
 import InfiniteScrollCarouselModule from '@/modules/InfiniteScrollCarouselModule';
 import { ButtonBelowTextModule } from '@/modules/ButtonBelowText';
 
-export default function HomeMain({ headerData, footerData, pageData }: IHomePageProps) {
+type IProps = Pick<IHomePageProps, 'pageData'>;
+
+export default function HomeMain({ pageData }: IProps) {
   const uaType = useUserAgent();
 
   const setGlobalConfig = useCallback(async () => {
@@ -38,10 +37,7 @@ export default function HomeMain({ headerData, footerData, pageData }: IHomePage
   });
 
   return (
-    <main className="home-page">
-      <NavHeader path={ROUTER.DEFAULT} data={headerData} />
-      <div className="empty-container" style={{ height: 80 }}></div>
-
+    <>
       {Array.isArray(pageData?.moduleList) &&
         pageData?.moduleList?.map((module, index) => {
           if (module.key === ModuleType.BrandModule) {
@@ -69,8 +65,6 @@ export default function HomeMain({ headerData, footerData, pageData }: IHomePage
           }
           return <></>;
         })}
-
-      <NavFooter data={footerData} />
-    </main>
+    </>
   );
 }

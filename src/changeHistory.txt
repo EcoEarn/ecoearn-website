@@ -1,1 +1,10 @@
 20240705 14:12 add active social icon
+20240806 15:25 replace cms testnet url
+20240812 16:50 add discord social icon
+20240815 15:46 replace discord url
+20240912 04:29 replace header footer to new staking page
+20240912 10:42 update cms
+20240915 15:28 replace logo and rewards pic
+20240918 09:42 update cms footer
+20241009 15:32 remove discord
+20241010 13:52 replace terms of service url
