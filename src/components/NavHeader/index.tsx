@@ -161,6 +161,9 @@ export default function NavHeader({ className, style, path = ROUTER.DEFAULT, dat
                     borderColor: data.actionButton.commonStyles.default.borderColor,
                     color: data.actionButton.commonStyles.default.fontColor,
                     width: data.actionButton.commonStyles.width ? data.actionButton.commonStyles.width + 'px' : 'auto',
+                    borderRadius: 12,
+                    border: 'none',
+                    cursor: 'not-allowed',
                   }}>
                   {data.actionButton.text}
                 </div>

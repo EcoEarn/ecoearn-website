@@ -11,6 +11,7 @@ export function jumpOrScrollToTop(path: ROUTER, callback?: () => void): void {
 }
 
 export function openWithBlank(url: string, target = '_blank'): void {
+  if (!url) return;
   const newWindow = window.open(url, target);
   if (newWindow) {
     newWindow.opener = null;
