@@ -1,0 +1,98 @@
+/* stylelint-disable selector-class-pattern */
+@import '/src/assets/theme/color.scss';
+@import '/src/assets/theme/constants.scss';
+
+.outroModuleWrap {
+  background-image: url('../../../../assets/images/home/bg_dots.png'), url('../../../../assets/images/home/bg_dots.png');
+  background-repeat: no-repeat;
+  background-position: -69px -238px, calc(100% + 56px) calc(100% + 140px);
+  background-size: auto 424px;
+
+  .outroModuleContainer {
+    position: relative;
+    margin: auto;
+    width: 100%;
+    max-width: $divide-1080;
+    padding: 240px 0 280px;
+
+    .outroModuleTitle {
+      margin-bottom: 61px;
+      color: $primary-text;
+      text-align: center;
+      font-family: Poppins-Bold, sans-serif;
+      font-size: 79px;
+      line-height: 79px; /* 80px */
+
+      .purple {
+        color: $brand;
+      }
+    }
+
+
+    .outroModuleBtns {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 9px;
+    }
+  }
+
+  @media screen and (max-width: $divide-1080) {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 24px;
+
+    .outroModuleContainer {
+      max-width: $divide-1080;
+
+      .outroModuleTitle {
+        margin-top: 78px;
+        font-size: 85px;
+        line-height: 85px;
+      }
+    
+    }
+  }
+
+  @media screen and (max-width: $divide-991) {
+
+    .outroModuleContainer {
+      max-width: 100%;
+      padding: 222px 20px 260px;
+
+      .outroModuleTitle {
+        margin-top: 46px;
+        font-size: 86px;
+        line-height: 86px;
+      }
+    
+      .outroModuleDesc {
+        margin: 64px 0;
+        font-size: 28px;
+      }
+    }
+  }
+
+  @media screen and (max-width: $divide-767) {
+
+    .outroModuleContainer {
+      padding: 116px 0 204px;
+
+      .outroModuleTitle {
+        margin-bottom: 30px;
+        font-size: 34px;
+        line-height: 34px;
+      }
+
+      .linkButton {
+        padding: 0 21.43px;
+        width: 112.86px;
+        height: 36.75px;
+        line-height: 36.75px;
+        border-radius: 28.13px;
+      }
+    }
+  }
+}
+

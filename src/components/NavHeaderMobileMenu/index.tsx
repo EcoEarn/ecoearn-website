@@ -54,7 +54,7 @@ export default function NavHeaderMobileMenu({ isOpen = false, data, callback }: 
 
   return (
     <Popup
-      position="right"
+      position="left"
       visible={isOpen}
       showCloseButton={false}
       className="navHeaderMobileMenu"

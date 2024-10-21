@@ -1,0 +1,157 @@
+/* stylelint-disable selector-class-pattern */
+@import '/src/assets/theme/color.scss';
+@import '/src/assets/theme/constants.scss';
+
+.antSteps {
+  :global(.ant-steps-icon) {
+    top: -11px;
+  }
+
+  :global(.ant-steps-item-icon) {
+    margin-right: 132px !important;
+  }
+
+  :global(.ant-steps-item-tail::after) {
+    margin-top: 9px;
+    height: 94% !important;
+    margin-left: 45px !important;
+    background-color: $brand !important;
+  }
+
+  :global(.ant-steps-item-title) {
+    margin-bottom: 23px;
+    font-size: 40px !important;
+    font-family: Poppins-Bold, sans-serif !important;
+  }
+
+  :global(.ant-steps-item-description) {
+    padding-bottom: 95px !important;
+    font-size: 15px !important;
+    font-family: Poppins-Regular, sans-serif !important;
+    color: $primary-text !important;
+    line-height: 22px;
+    opacity: .5;
+  }
+
+
+}
+
+.defaultDot {
+  display: inline-block;
+  white-space: nowrap;
+  padding: 0 10px;
+  border-radius: 38px;
+  color: $brand;
+  width: 75.5px;
+  height: 36px;
+  font-size: 14px;
+  font-family: Poppins-Regular, sans-serif;
+  line-height: 34px;
+  text-align: center;
+  border: 1px solid $brand;
+  box-sizing: border-box;
+}
+
+.stepModuleWrap {
+  background-image: url('../../../../assets/images/home/bg_dots.png'), url('../../../../assets/images/home/bg_dots.png');
+  background-repeat: no-repeat;
+  background-position: -69px calc(100% + 44.76px), calc(100% + 223px) -362px;
+  background-size: auto 424px;
+
+  .stepModuleContainer {
+    margin: auto;
+    padding: 100px 0;
+    max-width: $divide-1080;
+
+    .stepModuleImgWrap {
+      padding-right: 125px;
+
+      .stepModuleTitle {
+        color: $primary-text;
+        font-family: Poppins-Bold, sans-serif;
+        font-size: 44px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 56px;
+  
+        .purple {
+          color: $brand;
+        }
+      }
+
+      .stepModuleLink {
+        margin-top: 22px;
+      }
+
+    }
+
+  }
+}
+
+@media screen and (max-width: $divide-767) {
+  .antSteps {
+    :global(.ant-steps-icon) {
+      top: -11px;
+    }
+  
+    :global(.ant-steps-item-icon) {
+      margin-right: 102px !important;
+    }
+  
+    :global(.ant-steps-item-description) {
+      font-size: 13px !important;
+      padding-bottom: 49px !important;
+    }
+  
+    :global(.ant-steps-item-tail::after) {
+      margin-top: 3px;
+      height: 97% !important;
+      margin-left: 40px !important;
+      background-color: $brand !important;
+    }
+  
+    :global(.ant-steps-item-title) {
+      margin-bottom: 20px;
+      font-size: 22px !important;
+    }
+  }
+
+  .defaultDot {
+    border-radius: 38px;
+    color: $brand;
+    width: 62px;
+    height: 30px;
+    font-size: 12px;
+    line-height: 30px;
+  }
+
+  .stepModuleWrap {
+    .stepModuleContainer {
+      padding: 100px 0;
+      max-width: 100%;
+
+      .stepModuleImgWrap {
+        padding-right: 0;
+
+        .stepModuleTitle {
+          color: $primary-text;
+          font-family: Poppins-Bold, sans-serif;
+          font-size: 28px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 38px;
+    
+          .purple {
+            color: $brand;
+          }
+        }
+
+        .stepModuleLink {
+          margin-top: 22px;
+        }
+
+      }
+
+    }
+  }
+}

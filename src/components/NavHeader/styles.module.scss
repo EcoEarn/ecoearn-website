@@ -14,7 +14,7 @@
 }
 
 .navBlackHeader {
-  background: $page-bg;
+  background: transparent;
 }
 
 .navSticky {
@@ -48,12 +48,12 @@
 
 .actionButton {
   font-size: 16px;
-  height: 48px;
-  border-radius: 6px;
+  height: 45px;
+  border-radius: 34.5px;
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 0 28px;
+  padding: 0 26px;
   cursor: pointer;
   border: 1px solid;
   &:hover {
@@ -71,7 +71,10 @@
 .menus {
   display: flex;
   align-items: center;
-  gap: 64px;
+  border-radius: 101.25px;
+  gap: 69px;
+  padding:  6px 7.47px 6px 58px;
+  background-color: #fff;
 
   .firstMenuWithChild {
     cursor: pointer;
@@ -150,5 +153,59 @@
   }
   .menus {
     display: none;
+  }
+
+  .navHeader {
+    padding-left: 30px;
+    padding-right: 10px;
+    background: $white-bg;
+    border-radius: 40px;
+    height: 53px;
+  }
+  
+  .navBlackHeader {
+    top: 10px;
+    background: transparent;
+
+    .actionButton {
+      width: auto !important;
+      font-size: 12px;
+      height: 38px;
+      border-radius: 29.475px;
+      padding: 0 22px;
+    }
+  }
+}
+
+
+
+@media screen and (max-width: $divide-767) {
+  
+  .menuIcon {
+    display: block;
+  }
+  .menus {
+    display: none;
+  }
+
+  .navHeader {
+    padding-left: 30px;
+    padding-right: 10px;
+    background: $white-bg;
+    border-radius: 90px;
+    height: 46px;
+  }
+  
+  .navBlackHeader {
+    top: 10px;
+    background: transparent;
+
+    .actionButton {
+      width: auto !important;
+      font-size: 12px;
+      height: 38px;
+      border-radius: 29.475px;
+      padding: 0 22px;
+    }
   }
 }
