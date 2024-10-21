@@ -1,0 +1,12 @@
+.counter {
+  font-size: 16px;
+  overflow: hidden;
+  display: inline-block;
+  height: 24px;
+  line-height: 24px;
+}
+
+.animate-number {
+  display: inline-block;
+  transition: transform 1s ease-out;
+}

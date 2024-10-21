@@ -1,15 +1,16 @@
-import { Button } from 'antd';
+/* eslint-disable @next/next/no-img-element */
 import clsx from 'clsx';
 import CommonImage from '@/components/CommonImage';
 import styles from './styles.module.scss';
-import { jumpOrScrollToTop, openWithBlank, switchPage } from '@/utils/router';
+import { jumpOrScrollToTop } from '@/utils/router';
 import { ROUTER } from '@/constants/enum';
 import { useCallback, useRef, useState } from 'react';
-import MenuArrowSVG from '@/components/SVGComponents/MenuArrowSVG';
 import { Popup } from 'antd-mobile';
 import { Header } from '@/types/global/header';
 import { s3Url } from '@/constants/network';
 import CloseSVG from '../SVGComponents/CloseSVG';
+import Link from 'next/link';
+import { docsEcoearnDomain } from '@/api/constants';
 
 enum HiddenSecondType {
   ALL_HIDDEN = 'none',
@@ -22,7 +23,7 @@ export type NavHeaderMobileMenuProps = {
 };
 
 export default function NavHeaderMobileMenu({ isOpen = false, data, callback }: NavHeaderMobileMenuProps) {
-  const [menuData, setMenuData] = useState(data.menuList || []);
+  const [, setMenuData] = useState(data.menuList || []);
   const showSecondMenusIndex = useRef<number>(-1);
 
   const onClose = () => {
@@ -54,7 +55,7 @@ export default function NavHeaderMobileMenu({ isOpen = false, data, callback }: 
 
   return (
     <Popup
-      position="right"
+      position="left"
       visible={isOpen}
       showCloseButton={false}
       className="navHeaderMobileMenu"
@@ -74,52 +75,25 @@ export default function NavHeaderMobileMenu({ isOpen = false, data, callback }: 
         </div>
       </div>
       <div className={styles.menusWrap}>
-        {menuData?.map((item, index) => {
-          return (
-            <div key={'NavHeaderMobileMenu-first-' + item.title + index}>
-              <div className={styles.menuGroup}>
-                <div
-                  className={clsx([
-                    'flex-row-between',
-                    styles.firstMenu,
-                    item?.isShowSecondMenus ? styles.rotateSvg : null,
-                  ])}
-                  onClick={
-                    item?.children?.length === 0
-                      ? () => switchPage(item.type, item.path, onClose)
-                      : () => showSecondMenus(index)
-                  }>
-                  <span className="header-nav-btn overflow-x-hidden">{item.title}</span>
-                  {item?.children?.length > 0 && <MenuArrowSVG />}
-                </div>
-                {item?.children?.length > 0 && (
-                  <div
-                    className={clsx([styles.secondMenuList, item?.isShowSecondMenus ? styles.visible : styles.hidden])}>
-                    {item.children.map((v, k) => {
-                      return (
-                        <div
-                          key={'NavHeaderMobileMenu-second-' + v.title + k}
-                          className={clsx(['overflow-x-hidden', styles.secondMenu])}
-                          onClick={() => switchPage(v.type, v.path, onClose)}>
-                          {v.title}
-                        </div>
-                      );
-                    })}
-                  </div>
-                )}
-              </div>
-            </div>
-          );
-        })}
-
-        {data.actionButton?.text && (
-          <Button
-            type="text"
-            className={styles.downloadBtn}
-            onClick={() => openWithBlank(data.actionButton?.link.url || '')}>
-            {data?.actionButton.text}
-          </Button>
-        )}
+        <div className={styles.menuList}>
+          <ul>
+            <li>
+              <Link className={styles.menuList_link} href={docsEcoearnDomain} target="_blank">
+                Docs
+              </Link>
+            </li>
+            <li>
+              <Link className={styles.menuList_link} href="https://x.com/ecoearn_web3" target="_blank">
+                <img src={require('../../assets/images/Twitter_mobile.png').default.src} alt="" />
+              </Link>
+            </li>
+            <li>
+              <Link className={styles.menuList_link} href="https://t.me/ecoearn_web3" target="_blank">
+                <img src={require('../../assets/images/Telegram_mobile.png').default.src} alt="" />
+              </Link>
+            </li>
+          </ul>
+        </div>
       </div>
     </Popup>
   );

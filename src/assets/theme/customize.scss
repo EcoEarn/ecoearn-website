@@ -1,6 +1,7 @@
 /* stylelint-disable alpha-value-notation */
 /* stylelint-disable color-function-notation */
 @import './constants.scss';
+@import '/src/assets/theme/color.scss';
 
 @font-face {
   font-family: Roboto-Bold;
@@ -62,3 +63,45 @@ html {
 // Not suitable for dark mode
 // html[data-theme='dark'] {
 // }
+
+.default-link-button {
+  display: inline-block;
+  padding: 0 35px;
+  border-radius: 38px;
+  font-family: Poppins-Regular, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: $brand;
+  height: 35px;
+  line-height: 35px;
+  border: 1px solid $brand;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $primary-text;
+    color: $page-bg;
+    border-color: $primary-text;
+  }
+}
+
+.primary-link-button {
+  display: inline-block;
+  padding: 0 35px;
+  border-radius: 38px;
+  color: $page-bg;
+  font-family: Poppins-Regular, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  height: 35px;
+  line-height: 35px;
+  background-color: $brand;
+  box-sizing: border-box;
+  transition: background-color 0.3s ease-in-out;
+
+  &:hover {
+    background-color: $primary-text;
+    color: $page-bg;
+    border-color: $primary-text;
+  }
+}
