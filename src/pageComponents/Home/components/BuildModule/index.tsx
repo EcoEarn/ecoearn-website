@@ -50,7 +50,10 @@ function BuildModule() {
         </div>
 
         <div className={styles.buildModuleLinkBottom}>
-          <Link href="https://aelf.com/" target="_blank" className="default-link-button">
+          <Link
+            href="https://aelf.com/"
+            target="_blank"
+            className={clsx(['default-link-button', styles.buildModuleLinkBottomLink])}>
             Find Out More
           </Link>
         </div>
