@@ -22,7 +22,7 @@ function BrandModule() {
     <section className={clsx(['section-container', styles.brandModuleWrap])}>
       <section className={clsx([styles.brandModuleContainer, styles.brandModule])}>
         <div className={styles.brandModuleBtns}>
-          <p className="default-link-button">Built on aelf Blockchain</p>
+          <p className={styles.brandModulefakeBtn}>Built on aelf Blockchain</p>
         </div>
 
         <h1 className={styles.brandModuleTitle}>
@@ -32,10 +32,13 @@ function BrandModule() {
         <p className={styles.brandModuleDesc}>Simple, secure, and fuss free for all.</p>
 
         <div className={styles.brandModuleBtns}>
-          <Link href={AppEcoearnDomain + '/staking'} className="primary-link-button" target="_blank">
+          <Link
+            href={AppEcoearnDomain + '/staking'}
+            className={clsx(['primary-link-button', styles.linkBtn])}
+            target="_blank">
             Stake Now
           </Link>
-          <Link href={docsEcoearnDomain} className="default-link-button" target="_blank">
+          <Link href={docsEcoearnDomain} className={clsx(['default-link-button', styles.linkBtn])} target="_blank">
             View Docs
           </Link>
         </div>

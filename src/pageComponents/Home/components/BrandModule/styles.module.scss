@@ -13,7 +13,21 @@
     margin: auto;
     width: 100%;
     max-width: $divide-1080;
-    padding: 263px 0 180px;
+    padding: 210px 0 180px;
+
+    .brandModulefakeBtn {
+      color: #7D48E8;
+      font-family: Poppins-Regular, sans-serif;
+      font-size: 15px;
+      font-weight: 400;
+      text-align: center;
+      height: 32px;
+      line-height: 32px;
+      padding: 0 21.33px;
+      gap: 57.59px;
+      border-radius: 27.02px;
+      border: 1px solid #D8C8F8;
+    }
 
     .brandModuleHeader {
       position: absolute;
@@ -25,10 +39,10 @@
 
     .brandModuleFooter {
       position: absolute;
-      right: 0;
+      right: -132px;
       bottom: 0;
-      width: 117px;
-      height: 113px;
+      width: 166px;
+      height: 161px;
       overflow: hidden;
     }
 
@@ -37,10 +51,10 @@
       color: $primary-text;
       text-align: center;
       font-family: Poppins-Bold, sans-serif;
-      font-size: 85px;
+      font-size: 98px;
       font-style: normal;
       font-weight: 700;
-      line-height: 85px; /* 135px */
+      line-height: 98px;
 
       .purple {
         color: $brand;
@@ -51,6 +65,7 @@
       margin: 45px 0;
       color: $primary-text;
       text-align: center;
+      font-family: Poppins-Regular, sans-serif;
       font-size: 26px;
       font-style: normal;
       font-weight: 400;
@@ -62,6 +77,12 @@
       align-items: center;
       justify-content: center;
       gap: 9px;
+
+      .linkBtn {
+        padding: 0 32px;
+        height: 54px;
+        line-height: 54px;
+      }
     }
   }
 
@@ -79,6 +100,10 @@
         top: 168px;
         left: 22px;
         width: 166px;
+      }
+
+      .brandModuleFooter {
+        right: 0;
       }
 
       .brandModuleTitle {
@@ -111,6 +136,10 @@
         width: 126px;
       }
 
+      .brandModuleFooter {
+        right: 0;
+      }
+
       .brandModuleTitle {
         margin-top: 46px;
         font-size: 61px;
@@ -132,6 +161,18 @@
     .brandModuleContainer {
       padding: 196px 0 182px;
 
+      .brandModulefakeBtn {
+        color: #7D48E8;
+        font-family: Poppins-Regular, sans-serif;
+        font-size: 14px;
+        font-weight: 400;
+        text-align: center;
+        height: 27.46px;
+        line-height: 27.46px;
+        padding: 0 18.69px;
+        border-radius: 23.68px;
+      }
+
       .brandModuleHeader {
         top: 98px;
         left: 22px;
@@ -141,6 +182,7 @@
       .brandModuleFooter {
         bottom: 0;
         width: 117px;
+        height: 113px;
       }
 
       .brandModuleTitle {
@@ -154,7 +196,16 @@
         font-size: 16px;
         line-height: 100%;
       }
+      .brandModuleBtns {
+        .linkBtn {
+          font-size: 13px;
+          padding: 0 22px;
+          height: 36px;
+          line-height: 36px;
+        }
+      }
     }
+
   }
 }
 

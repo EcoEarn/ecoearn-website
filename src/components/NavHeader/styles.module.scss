@@ -34,6 +34,15 @@
   background-color: $white-bg;
 }
 
+.logoWarpImg {
+  width: 150px !important;
+  height: 25.23px !important;
+  img {
+    width: 150px !important;
+    height: 25.23px !important;
+  }
+}
+
 .logoImg {
   width: 106px;
   height: auto;
@@ -47,10 +56,12 @@
 
   .header__out_link {
     display: inline-block;
+    transition: fill 0.2s ease-in-out;
 
-    img {
-      width: 24px;
-      height: auto;
+    &:hover {
+      svg path {
+        fill: $primary-text;
+      }
     }
   }
 }
@@ -69,6 +80,13 @@
 .linkBtnWrap {
   display: inline-block;
   position: relative;
+
+  .textLink {
+    font-family: Poppins-Regular, sans-serif;
+    font-size: 18px;
+    font-weight: 500;
+    line-height: 24px;
+  }
 }
 
 .btnUnderline {
@@ -203,6 +221,15 @@
     height: 53px;
   }
 
+  .logoWarpImg {
+    width: 106px !important;
+    height: 17.87px !important;
+    img {
+      width: 106px !important;
+      height: 17.87px !important;
+    }
+  }
+
   .logoWrap {
     padding-left: 32px;
     padding-right: 32px;
@@ -244,7 +271,7 @@
 
   .logoWrap {
     padding-left: 32px;
-    padding-right: 32px;
+    padding-right: 12px;
     height: 46px;
   }
   

@@ -68,6 +68,9 @@ html {
   display: inline-block;
   padding: 0 35px;
   border-radius: 38px;
+  font-family: Poppins-Regular, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
   color: $brand;
   height: 35px;
   line-height: 35px;
@@ -75,7 +78,7 @@ html {
   box-sizing: border-box;
 
   &:hover {
-    background-color: $hover;
+    background-color: $primary-text;
     color: $page-bg;
   }
 }
@@ -85,6 +88,9 @@ html {
   padding: 0 35px;
   border-radius: 38px;
   color: $page-bg;
+  font-family: Poppins-Regular, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
   height: 35px;
   line-height: 35px;
   background-color: $brand;

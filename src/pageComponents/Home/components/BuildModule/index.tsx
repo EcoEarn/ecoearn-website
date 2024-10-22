@@ -1,6 +1,12 @@
 /* eslint-disable @next/next/no-img-element */
 import clsx from 'clsx';
 import styles from './styles.module.scss';
+import AelfSVG from '@/assets/images/home/aelf.svg';
+import SchrodingerSVG from '@/assets/images/home/schrodinger.svg';
+import PortkeySVG from '@/assets/images/home/portkey.svg';
+import AelfMobileSVG from '@/assets/images/home/aelf_mobile.svg';
+import SchrodingerMobileSVG from '@/assets/images/home/schrodinger_mobile.svg';
+import PortkeyMobileSVG from '@/assets/images/home/portkey_mobile.svg';
 import Link from 'next/link';
 
 function BuildModule() {
@@ -44,20 +50,35 @@ function BuildModule() {
         </div>
 
         <div className={styles.buildModuleLinkBottom}>
-          <Link href="https://aelf.com/" target="_blank" className="default-link-button">
+          <Link
+            href="https://aelf.com/"
+            target="_blank"
+            className={clsx(['default-link-button', styles.buildModuleLinkBottomLink])}>
             Find Out More
           </Link>
         </div>
 
         <div className={styles.buildModuleFooter}>
           <Link href="https://aelf.com/" className={styles.buildModuleFooterItem} target="_blank">
-            <img src={require('../../../../assets/images/home/logo_aelf.png').default.src} alt="" />
+            <AelfSVG />
           </Link>
           <Link href="https://schrodingernft.ai/" className={styles.buildModuleFooterItem} target="_blank">
-            <img src={require('../../../../assets/images/home/logo_schrodinger.png').default.src} alt="" />
+            <SchrodingerSVG />
           </Link>
           <Link href="https://portkey.finance/" className={styles.buildModuleFooterItem} target="_blank">
-            <img src={require('../../../../assets/images/home/logo_portkey.png').default.src} alt="" />
+            <PortkeySVG />
+          </Link>
+        </div>
+
+        <div className={styles.buildModuleFooterMobile}>
+          <Link href="https://aelf.com/" className={styles.buildModuleFooterMobileItem} target="_blank">
+            <AelfMobileSVG />
+          </Link>
+          <Link href="https://schrodingernft.ai/" className={styles.buildModuleFooterMobileItem} target="_blank">
+            <SchrodingerMobileSVG />
+          </Link>
+          <Link href="https://portkey.finance/" className={styles.buildModuleFooterMobileItem} target="_blank">
+            <PortkeyMobileSVG />
           </Link>
         </div>
       </section>

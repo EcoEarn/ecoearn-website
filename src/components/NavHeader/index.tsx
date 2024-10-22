@@ -9,8 +9,9 @@ import { jumpOrScrollToTop, openWithBlank, switchPage } from '@/utils/router';
 import MenuArrowSVG from '@/components/SVGComponents/MenuArrowSVG';
 import NavSelectedSVG from '../SVGComponents/NavSelectedSVG';
 import { Header, SecondMenu, TopMenu } from '@/types/global/header';
-import { s3Url } from '@/constants/network';
 import MenuGraySVG from '../SVGComponents/MenuGraySVG';
+import XSVG from '@/assets/images/x_logo.svg';
+import TelegramSVG from '@/assets/images/Telegram.svg';
 import Link from 'next/link';
 
 export interface INavHeaderProps {
@@ -103,6 +104,7 @@ export default function NavHeader({ className, style, path = ROUTER.DEFAULT, dat
             <CommonImage
               quality={100}
               src={require(`@/assets/images/logo.png`).default.src}
+              className={styles.logoWarpImg}
               style={{ width: 106.24, height: 17.87, cursor: 'pointer' }}
               fill
               alt="websiteLogo"
@@ -112,10 +114,10 @@ export default function NavHeader({ className, style, path = ROUTER.DEFAULT, dat
 
             <div className={styles.header__links}>
               <Link className={styles.header__out_link} href="https://x.com/ecoearn_web3" target="_blank">
-                <img src={require('../../assets/images/icon_twitter.png').default.src} alt="" />
+                <XSVG />
               </Link>
               <Link className={styles.header__out_link} href="https://t.me/ecoearn_web3" target="_blank">
-                <img src={require('../../assets/images/icon_telegram.png').default.src} alt="" />
+                <TelegramSVG />
               </Link>
             </div>
           </div>
@@ -170,7 +172,12 @@ export default function NavHeader({ className, style, path = ROUTER.DEFAULT, dat
                       </Popover>
                     ) : (
                       <div className={styles.linkBtnWrap} onClick={() => switchPage(item.type, item.path)}>
-                        <div className={clsx(['header-nav-btn', item.path === path ? 'header-nav-btn-select' : ''])}>
+                        <div
+                          className={clsx([
+                            'header-nav-btn',
+                            styles.textLink,
+                            item.path === path ? 'header-nav-btn-select' : '',
+                          ])}>
                           {item.title}
                         </div>
                         {item.path === path && (

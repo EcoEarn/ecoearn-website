@@ -79,7 +79,7 @@
       .gridModuleImg2 {
         position: absolute;
         right: 10px;
-        top: 0;
+        top: 10px;
         width: 50%;
         height: auto;
         transition: opacity .8s;
@@ -183,8 +183,6 @@
   
         .gridModuleImg2 {
           position: absolute;
-          right: 0;
-          top: 0;
           width: 50%;
           height: auto;
           transition: opacity .8s;
@@ -192,7 +190,7 @@
   
         .gridModuleImg3 {
           position: absolute;
-          right: 0;
+          right: 40px;
           top: -2%;
           width: 50%;
           height: auto;
@@ -316,6 +314,8 @@
           border-radius: 24px;
           
           .gridModuleTitle {
+            font-family: Poppins-Regular, sans-serif;
+            font-weight: 700;
             margin-bottom: 18px;
             padding: 0 32px;
             font-size: 26px;
@@ -330,8 +330,8 @@
             transition: none;
             text-align: left;
           }
-    
-          .gridDesc1 {
+
+          .gridDesc1, .gridTitle2, .gridTitle3 {
             width: 100%;
           }
         }

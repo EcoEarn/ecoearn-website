@@ -12,10 +12,10 @@
 
   .lottie {
     position: absolute;
-    right: 50%;
+    right: 55%;
     bottom: -134px;
-    width: 860px;
-    height: 648px;
+    width: 760px;
+    height: 540px;
     overflow: hidden;
   }
 
@@ -38,7 +38,6 @@
         color: $brand;
       }
     }
-
 
     .outroModuleBtns {
       display: flex;
@@ -125,6 +124,7 @@
         padding: 0 21.43px;
         width: 112.86px;
         height: 36.75px;
+        font-size: 13px;
         line-height: 36.75px;
         border-radius: 28.13px;
       }
