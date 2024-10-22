@@ -28,7 +28,8 @@
       right: 0;
       bottom: 0;
       width: 117px;
-      height: auto;
+      height: 113px;
+      overflow: hidden;
     }
 
     .brandModuleTitle {
@@ -72,15 +73,12 @@
 
     .brandModuleContainer {
       max-width: $divide-1080;
+      padding: 200px 20px 128px;
 
       .brandModuleHeader {
         top: 168px;
         left: 22px;
         width: 166px;
-      }
-
-      .brandModuleFooter {
-        width: 230px;
       }
 
       .brandModuleTitle {
@@ -105,16 +103,12 @@
 
     .brandModuleContainer {
       max-width: 100%;
-      padding: 222px 20px 260px;
+      padding: 200px 20px 128px;
 
       .brandModuleHeader {
         top: 128px;
         left: 22px;
         width: 126px;
-      }
-
-      .brandModuleFooter {
-        width: 230px;
       }
 
       .brandModuleTitle {
@@ -132,7 +126,7 @@
 
   @media screen and (max-width: $divide-767) {
     background-image: url('../../../../assets/images/home/bg_dots.png'), url('../../../../assets/images/home/bg_dots.png'), url('../../../../assets/images/home/bg_dots.png');
-    background-position: -15px 175px, -15px calc(100% + 12px), calc(100% + 34px) -26px;
+    background-position: -15px 175px, calc(100% + 34px) calc(100% - 167px), calc(100% + 34px) -26px;
     background-size: auto 95px;
 
     .brandModuleContainer {

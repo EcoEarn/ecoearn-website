@@ -13,8 +13,46 @@
   justify-content: space-between;
 }
 
+.header__top {
+  display: flex;
+  align-items: center;
+}
+
 .navBlackHeader {
   background: transparent;
+}
+
+.logoWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 40px;
+  padding-right: 50px;
+  gap: 75px;
+  height: 58px;
+  border-radius: 100px;
+  background-color: $white-bg;
+}
+
+.logoImg {
+  width: 106px;
+  height: auto;
+}
+
+.header__links {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  
+
+  .header__out_link {
+    display: inline-block;
+
+    img {
+      width: 24px;
+      height: auto;
+    }
+  }
 }
 
 .navSticky {
@@ -47,6 +85,8 @@
 }
 
 .actionButton {
+  font-family: Poppins-Regular, sans-serif;
+  font-weight: 600;
   font-size: 16px;
   height: 45px;
   border-radius: 34.5px;
@@ -151,15 +191,21 @@
   .menuIcon {
     display: block;
   }
-  .menus {
+  .menus, .header__links {
     display: none;
   }
-
+  
   .navHeader {
     padding-left: 30px;
     padding-right: 10px;
     background: $white-bg;
     border-radius: 40px;
+    height: 53px;
+  }
+
+  .logoWrap {
+    padding-left: 32px;
+    padding-right: 32px;
     height: 53px;
   }
   
@@ -193,6 +239,12 @@
     padding-right: 10px;
     background: $white-bg;
     border-radius: 90px;
+    height: 46px;
+  }
+
+  .logoWrap {
+    padding-left: 32px;
+    padding-right: 32px;
     height: 46px;
   }
   

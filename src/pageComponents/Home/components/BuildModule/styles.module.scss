@@ -109,10 +109,95 @@
     }
   }
 }
+@media screen and (max-width: $divide-1080) {
+
+  .buildModuleWrap {
+    background-image: url('../../../../assets/images/home/bg_dots.png'), url('../../../../assets/images/home/bg_dots.png');
+    background-repeat: no-repeat;
+    background-position: -69px calc(100% + 183px), calc(100% + 56px) -337.5px;
+    background-size: auto 424px;
+  
+    .buildModuleContainer {
+      margin: auto;
+      padding: 92px 22px 0;
+      max-width: 100%;
+  
+      .buildModuleHeader {
+        margin-bottom: 46px;
+      }
+  
+      .buildModuleTitle {
+        font-size: 55px;
+        line-height: 55px;
+      }
+  
+      .buildModuleContent {
+  
+        .buildModuleWrapItem {
+          height: 287px;
+  
+          .buildModuleWrapItemTitle {
+            margin-bottom: 14px;
+            font-size: 24px;
+            line-height: 24px;
+          }
+  
+          .buildModuleWrapItemDesc {
+            font-size: 13px;
+            line-height: 18px;
+          }
+        }
+      }
+  
+    }
+  }
+}
+@media screen and (max-width: $divide-991) {
+  .buildModuleWrap {
+    background-image: url('../../../../assets/images/home/bg_dots.png'), url('../../../../assets/images/home/bg_dots.png');
+    background-repeat: no-repeat;
+    background-position: -15px calc(100% + 79px), calc(100% + 27px) -78px;
+    background-size: auto 220px;
+  
+    .buildModuleContainer {
+      padding: 71px 22px 0;
+  
+      .buildModuleHeader {
+        margin-bottom: 35px;
+      }
+  
+      .buildModuleTitle {
+        font-size: 42px;
+        line-height: 42px;
+      }
+  
+      .buildModuleContent {
+  
+        .buildModuleWrapItem {
+          padding: 20px;
+          height: 222px;
+  
+          .buildModuleWrapItemTitle {
+            margin-bottom: 11px;
+            font-size: 16px;
+            line-height: 16px;
+          }
+  
+          .buildModuleWrapItemDesc {
+            font-size: 10px;
+            line-height: 14px;
+          }
+        }
+      }
+  
+    }
+  }
+}
 
 @media screen and (max-width: $divide-767) {
 
   .buildModuleWrap {
+    background: none;
     .buildModuleContainer {
       max-width: 100%;
 

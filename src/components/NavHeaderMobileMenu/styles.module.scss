@@ -19,6 +19,31 @@
   height: 100%;
   overflow-y: auto;
   overscroll-behavior-y: contain !important;
+
+  .menuList {
+    padding: 15px;
+
+    ul li {
+      padding: 14px 0;
+    }
+
+    .menuList_link {
+      display: block;
+      height: 24px;
+      color: #070A26;
+      font-family: Poppins-Regular, sans-serif;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 24px;
+      text-align: left;
+      
+
+      img {
+        width: auto;
+        height: 24px
+      }
+    }
+  }
 }
 
 .menuGroup {

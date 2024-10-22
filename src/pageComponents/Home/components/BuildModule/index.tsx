@@ -11,7 +11,10 @@ function BuildModule() {
           <h2 className={styles.buildModuleTitle}>
             Built on the aelf <br /> ecosystem
           </h2>
-          <Link href="/ecosystem" className={clsx(['default-link-button', styles.buildModuleLink])}>
+          <Link
+            href="https://aelf.com/"
+            target="_blank"
+            className={clsx(['default-link-button', styles.buildModuleLink])}>
             Find Out More
           </Link>
         </div>
@@ -41,19 +44,19 @@ function BuildModule() {
         </div>
 
         <div className={styles.buildModuleLinkBottom}>
-          <Link href="/ecosystem" className="default-link-button">
+          <Link href="https://aelf.com/" target="_blank" className="default-link-button">
             Find Out More
           </Link>
         </div>
 
         <div className={styles.buildModuleFooter}>
-          <Link href="/ecosystem" className={styles.buildModuleFooterItem}>
+          <Link href="https://aelf.com/" className={styles.buildModuleFooterItem} target="_blank">
             <img src={require('../../../../assets/images/home/logo_aelf.png').default.src} alt="" />
           </Link>
-          <Link href="/ecosystem" className={styles.buildModuleFooterItem}>
+          <Link href="https://schrodingernft.ai/" className={styles.buildModuleFooterItem} target="_blank">
             <img src={require('../../../../assets/images/home/logo_schrodinger.png').default.src} alt="" />
           </Link>
-          <Link href="/ecosystem" className={styles.buildModuleFooterItem}>
+          <Link href="https://portkey.finance/" className={styles.buildModuleFooterItem} target="_blank">
             <img src={require('../../../../assets/images/home/logo_portkey.png').default.src} alt="" />
           </Link>
         </div>

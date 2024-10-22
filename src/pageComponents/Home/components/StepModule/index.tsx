@@ -4,6 +4,7 @@ import styles from './styles.module.scss';
 import { Col, Row, Steps } from 'antd';
 import type { StepsProps } from 'antd';
 import Link from 'next/link';
+import { AppEcoearnDomain } from '@/api/constants';
 
 const customDot: StepsProps['progressDot'] = (_, { index }) => (
   <span className={styles.defaultDot}>Step {index + 1}</span>
@@ -14,17 +15,26 @@ function StepModule() {
     <section className={clsx(['section-container', styles.stepModuleWrap])}>
       <section className={clsx([styles.stepModuleContainer, styles.stepModule])}>
         <Row>
-          <Col xs={24} sm={24} md={24} lg={11}>
+          <Col xs={24} sm={24} md={11}>
             <div className={styles.stepModuleImgWrap}>
               <h1 className={styles.stepModuleTitle}>
                 Earn Reward in <br /> <span className={styles.purple}> 3 </span> Simple Steps
               </h1>
-              <Link href="/staking" className={clsx(['primary-link-button', styles.stepModuleLink])}>
+              <Link
+                href={AppEcoearnDomain + '/staking'}
+                target="_blank"
+                className={clsx(['primary-link-button', styles.stepModuleLink])}>
                 Stake Now
               </Link>
+
+              <img
+                className={styles.stepModuleImgBg}
+                src={require('../../../../assets/images/home/simple_steps.png').default.src}
+                alt=""
+              />
             </div>
           </Col>
-          <Col xs={24} sm={24} md={24} lg={13}>
+          <Col xs={24} sm={24} md={13}>
             <Steps
               current={3}
               direction="vertical"

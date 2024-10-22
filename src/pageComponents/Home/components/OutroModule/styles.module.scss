@@ -3,10 +3,21 @@
 @import '/src/assets/theme/constants.scss';
 
 .outroModuleWrap {
+  position: relative;
   background-image: url('../../../../assets/images/home/bg_dots.png'), url('../../../../assets/images/home/bg_dots.png');
   background-repeat: no-repeat;
   background-position: -69px -238px, calc(100% + 56px) calc(100% + 140px);
   background-size: auto 424px;
+  overflow: hidden;;
+
+  .lottie {
+    position: absolute;
+    right: 50%;
+    bottom: -134px;
+    width: 860px;
+    height: 648px;
+    overflow: hidden;
+  }
 
   .outroModuleContainer {
     position: relative;
@@ -38,33 +49,45 @@
   }
 
   @media screen and (max-width: $divide-1080) {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding-bottom: 24px;
-
+    background-image: url('../../../../assets/images/home/bg_dots.png'), url('../../../../assets/images/home/bg_dots.png');
+    background-repeat: no-repeat;
+    background-position: -69px -238px, calc(100% + 56px) calc(100% + 140px);
+    background-size: auto 424px;
+  
     .outroModuleContainer {
-      max-width: $divide-1080;
-
+      max-width: 100%;
+      padding: 220px 0 257px;
+  
       .outroModuleTitle {
-        margin-top: 78px;
-        font-size: 85px;
-        line-height: 85px;
+        margin-bottom: 56px;
+        font-size: 69px;
+        line-height: 69px;
       }
-    
     }
   }
 
   @media screen and (max-width: $divide-991) {
+    background-image: url('../../../../assets/images/home/bg_dots.png'), url('../../../../assets/images/home/bg_dots.png');
+    background-repeat: no-repeat;
+    background-position: -15px -140px, calc(100% + 27px) calc(100% + 34px);
+    background-size: auto 220px;
+
+    .lottie {
+      left: 0;
+      bottom: -10px;
+      width: 406px;
+      height: 306px;
+      overflow: hidden;
+    }
 
     .outroModuleContainer {
       max-width: 100%;
-      padding: 222px 20px 260px;
+      padding: 170px 22px 199px;
 
       .outroModuleTitle {
-        margin-top: 46px;
-        font-size: 86px;
-        line-height: 86px;
+        margin-top: 42px;
+        font-size: 49px;
+        line-height: 49px;
       }
     
       .outroModuleDesc {
@@ -75,6 +98,19 @@
   }
 
   @media screen and (max-width: $divide-767) {
+    background-image: url('../../../../assets/images/home/bg_dots.png');
+    background-repeat: no-repeat;
+    background-position: calc(100% + 36px) top;
+    background-size: auto 225px;
+
+    .lottie {
+      left: 50%;
+      bottom: -100px;
+      width: 406px;
+      height: 306px;
+      overflow: hidden;
+      transform: translateX(-50%);
+    }
 
     .outroModuleContainer {
       padding: 116px 0 204px;

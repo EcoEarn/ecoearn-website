@@ -2,15 +2,27 @@
 import clsx from 'clsx';
 import styles from './styles.module.scss';
 import Link from 'next/link';
+import Lottie from 'lottie-web';
+import { useEffect } from 'react';
+import AnimationData from '../../../../assets/animation/Top_animation.json';
+import { AppEcoearnDomain, docsEcoearnDomain } from '@/api/constants';
 
 function BrandModule() {
+  useEffect(() => {
+    Lottie.loadAnimation({
+      container: document.getElementById('top-lottie') as Element,
+      renderer: 'svg',
+      loop: true,
+      autoplay: true,
+      animationData: AnimationData,
+    });
+  }, []);
+
   return (
     <section className={clsx(['section-container', styles.brandModuleWrap])}>
       <section className={clsx([styles.brandModuleContainer, styles.brandModule])}>
         <div className={styles.brandModuleBtns}>
-          <Link className="default-link-button" href="">
-            Built on aelf Blockchain
-          </Link>
+          <p className="default-link-button">Built on aelf Blockchain</p>
         </div>
 
         <h1 className={styles.brandModuleTitle}>
@@ -20,10 +32,10 @@ function BrandModule() {
         <p className={styles.brandModuleDesc}>Simple, secure, and fuss free for all.</p>
 
         <div className={styles.brandModuleBtns}>
-          <Link href="/staking" className="primary-link-button">
+          <Link href={AppEcoearnDomain + '/staking'} className="primary-link-button" target="_blank">
             Stake Now
           </Link>
-          <Link href="/docs" className="default-link-button">
+          <Link href={docsEcoearnDomain} className="default-link-button" target="_blank">
             View Docs
           </Link>
         </div>
@@ -33,11 +45,7 @@ function BrandModule() {
           src={require('../../../../assets/images/home/brand-header.png').default.src}
           alt=""
         />
-        <img
-          className={styles.brandModuleFooter}
-          src={require('../../../../assets/images/home/brand-footer.png').default.src}
-          alt=""
-        />
+        <div id="top-lottie" className={styles.brandModuleFooter}></div>
       </section>
     </section>
   );

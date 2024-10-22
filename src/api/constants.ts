@@ -1,4 +1,9 @@
-import { NEXT_PUBLIC_NETWORK_ENV, NEXT_PUBLIC_WEBSITE_NAME } from '../constants/misc';
+import {
+  NEXT_PUBLIC_NETWORK_ENV,
+  NEXT_PUBLIC_WEBSITE_NAME,
+  NEXT_PUBLIC_APP_WEBSITE_NAME,
+  NEXT_PUBLIC_DOCS_WEBSITE_NAME,
+} from '../constants/misc';
 import { BackEndNetWorkMap } from '../constants/network';
 
 export const BASE_CMS_URL =
@@ -7,6 +12,10 @@ export const BASE_CMS_URL =
     : '';
 
 export const BASE_DOWNLOAD_URL = BASE_CMS_URL + 'assets/';
+
+export const AppEcoearnDomain = NEXT_PUBLIC_APP_WEBSITE_NAME;
+
+export const docsEcoearnDomain = NEXT_PUBLIC_DOCS_WEBSITE_NAME;
 
 export const API = {
   GET: {

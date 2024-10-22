@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useEffect } from 'react';
 import Lottie from 'lottie-web';
 import AnimationData from '../../../../assets/animation/footerAnimation.json';
+import { AppEcoearnDomain } from '@/api/constants';
 
 function OutroModule() {
   useEffect(() => {
@@ -27,13 +28,15 @@ function OutroModule() {
         </h1>
 
         <div className={styles.outroModuleBtns}>
-          <Link href="/staking" className={clsx(['primary-link-button', styles.linkButton])}>
+          <Link
+            href={AppEcoearnDomain + '/staking'}
+            target="_blank"
+            className={clsx(['primary-link-button', styles.linkButton])}>
             Stake Now
           </Link>
         </div>
-
-        {/* <div id='back-lottie'></div> */}
       </section>
+      <div id="back-lottie" className={styles.lottie}></div>
     </section>
   );
 }
