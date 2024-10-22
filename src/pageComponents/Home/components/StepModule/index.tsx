@@ -17,15 +17,17 @@ function StepModule() {
         <Row>
           <Col xs={24} sm={24} md={11}>
             <div className={styles.stepModuleImgWrap}>
-              <h1 className={styles.stepModuleTitle}>
-                Earn Reward in <br /> <span className={styles.purple}> 3 </span> Simple Steps
-              </h1>
-              <Link
-                href={AppEcoearnDomain + '/staking'}
-                target="_blank"
-                className={clsx(['primary-link-button', styles.stepModuleLink])}>
-                Stake Now
-              </Link>
+              <div className={styles.stepModuleContentWrap}>
+                <h1 className={styles.stepModuleTitle}>
+                  Earn Reward in <br /> <span className={styles.purple}> 3 </span> Simple Steps
+                </h1>
+                <Link
+                  href={AppEcoearnDomain + '/staking'}
+                  target="_blank"
+                  className={clsx(['primary-link-button', styles.stepModuleLink])}>
+                  Stake Now
+                </Link>
+              </div>
 
               <img
                 className={styles.stepModuleImgBg}
