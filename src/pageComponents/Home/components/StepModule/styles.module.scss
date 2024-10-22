@@ -25,15 +25,13 @@
   }
 
   :global(.ant-steps-item-description) {
-    padding-bottom: 95px !important;
-    font-size: 15px !important;
+    padding-bottom: 115px !important;
+    font-size: 16px !important;
     font-family: Poppins-Regular, sans-serif !important;
     color: $primary-text !important;
     line-height: 22px;
     opacity: .5;
   }
-
-
 }
 
 .defaultDot {
@@ -60,7 +58,7 @@
 
   .stepModuleContainer {
     margin: auto;
-    padding: 100px 0;
+    padding: 100px 0 0;
     max-width: $divide-1080;
 
     .stepModuleImgWrap {
@@ -94,9 +92,9 @@
 
     .stepModuleImgBg {
       position: absolute;
-      left: -120px;
+      left: 0;
       bottom: 100px;
-      width: 274px;
+      width: 190px;
       height: auto;
       z-index: -1;
     }
@@ -134,14 +132,6 @@
   
         .stepModuleLink {
           margin-top: 22px;
-        }
-
-        .stepModuleImgBg {
-          position: absolute;
-          left: 0;
-          bottom: 100px;
-          width: 274px;
-          height: auto;
         }
   
       }
@@ -197,7 +187,7 @@
   
     .stepModuleContainer {
       margin: auto;
-      padding: 71px 0;
+      padding: 71px 0 0;
   
       .stepModuleImgWrap {
         position: relative;
@@ -212,14 +202,6 @@
           margin-top: 22px;
         }
 
-        .stepModuleImgBg {
-          position: absolute;
-          left: 0;
-          bottom: 100px;
-          width: 274px;
-          height: auto;
-        }
-  
       }
   
     }

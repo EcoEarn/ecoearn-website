@@ -46,7 +46,7 @@ function SwiperModule() {
                       alt=""
                     />
                   </div>
-                  <Row style={{ height: '100%' }}>
+                  <Row className={styles.swiperModuleTabPaneContentRow}>
                     <Col xs={24} sm={24} md={{ span: 16, offset: 8 }} lg={{ span: 14, offset: 10 }}>
                       <div className={styles.swiperModuleTabPaneDescWrap}>
                         <p className={styles.swiperModuleTabPaneType}>Point Staking</p>

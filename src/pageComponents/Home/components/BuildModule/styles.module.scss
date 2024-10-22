@@ -64,7 +64,7 @@
           font-weight: 400;
           line-height: 20px;
           text-align: left;
-          opacity: .5;
+          opacity: .75;
         }
 
         &:hover {
@@ -79,12 +79,12 @@
 
       .buildModuleItem2 {
         background-color: #B88EFF;
-        background-image: url('../../../../assets/images/home/build-architecture.png');
+        background-image: url('../../../../assets/images/home//build-gas.png');
       }
 
       .buildModuleItem3 {
         background-color: #6434C6;
-        background-image: url('../../../../assets/images/home//build-gas.png');
+        background-image: url('../../../../assets/images/home/build-architecture.png');
       }
     }
 
@@ -102,10 +102,16 @@
       gap: 24px;
 
       .buildModuleFooterItem {
-        img {
-          height: 66px;
+        &:hover {
+          svg g {
+            opacity: 1;
+          }
         }
       }
+    }
+
+    .buildModuleFooterMobile {
+      display: none;
     }
   }
 }
@@ -246,14 +252,17 @@
       }
 
       .buildModuleFooter {
-        gap: 0;
-  
-        .buildModuleFooterItem {
-          img {
-            height: 36px;
-          }
-        }
+        display: none;
       }
+
+      .buildModuleFooterMobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        gap: 0;
+      }
+
     }
   }
 }
