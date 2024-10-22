@@ -1,0 +1,130 @@
+/* stylelint-disable selector-class-pattern */
+@import '/src/assets/theme/color.scss';
+@import '/src/assets/theme/constants.scss';
+
+.footer {
+  min-width: $page-min-width;
+
+  .footer__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 auto;
+    width: 100%;
+    max-width: $divide-1080;
+    height: 92px;
+
+    .footer__content {
+      display: flex;
+      align-items: center;
+      gap: 64px;
+
+      .footer__logo {
+        width: 176px;
+        height: auto;
+      }
+
+      .footer__logo_s {
+        display: none;
+      }
+      
+      .footer__content__links {
+        display: flex;
+        align-items: center;
+        height: 22px;
+
+        .footer__link {
+          display: inline-block;
+          font-family: Poppins-Regular, sans-serif;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 22px;
+          color: #9F9F9F;
+        }
+
+        .divider {
+          margin-left: 36px;
+          margin-right: 36px;
+          width: 1px;
+          height: 100%;
+          background-color: #E1E1E1;
+        }
+      }
+    }
+
+    .footer__links {
+      display: flex;
+      align-items: center;
+      gap: 40px;
+      
+
+      .footer__out_link {
+        display: inline-block;
+
+        img {
+          width: 24px;
+          height: auto;
+        }
+      }
+    }
+
+  }
+
+  @media screen and (max-width: $divide-991) {
+    padding: 20px;
+
+    .footer__container {
+      width: 100%;
+      height: auto;
+  
+      .footer__content {
+        align-items: flex-start;
+        gap: 28px;
+  
+        .footer__logo {
+          display: none;
+        }
+  
+        .footer__logo_s {
+          display: block;
+          width: 28px;
+          height: auto;
+        }
+        
+        .footer__content__links {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 5.5px;
+          height: auto;
+  
+          .footer__link {
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 21px;
+          }
+  
+          .divider {
+            display: none;
+          }
+        }
+      }
+  
+      .footer__links {
+        display: flex;
+        align-items: center;
+        gap: 40px;
+        
+  
+        .footer__out_link {
+          display: inline-block;
+  
+          img {
+            width: 24px;
+            height: auto;
+          }
+        }
+      }
+  
+    }
+  }
+}

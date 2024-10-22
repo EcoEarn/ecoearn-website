@@ -1,6 +1,7 @@
 /* stylelint-disable alpha-value-notation */
 /* stylelint-disable color-function-notation */
 @import './constants.scss';
+@import '/src/assets/theme/color.scss';
 
 @font-face {
   font-family: Roboto-Bold;
@@ -62,3 +63,34 @@ html {
 // Not suitable for dark mode
 // html[data-theme='dark'] {
 // }
+
+.default-link-button {
+  display: inline-block;
+  padding: 0 35px;
+  border-radius: 38px;
+  color: $brand;
+  height: 35px;
+  line-height: 35px;
+  border: 1px solid $brand;
+  box-sizing: border-box;
+
+  &:hover {
+    background-color: $hover;
+    color: $page-bg;
+  }
+}
+
+.primary-link-button {
+  display: inline-block;
+  padding: 0 35px;
+  border-radius: 38px;
+  color: $page-bg;
+  height: 35px;
+  line-height: 35px;
+  background-color: $brand;
+  box-sizing: border-box;
+
+  &:hover {
+    background-color: $primary-text;
+  }
+}

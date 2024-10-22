@@ -17,16 +17,13 @@ export async function generateMetadata(): Promise<Metadata> {
 
 export default async function RootLayout({ children }: { children: React.ReactNode }) {
   const headerData = await getHeader();
-  const footerData = await getFooter();
 
   const env = process.env.NEXT_PUBLIC_NETWORK_ENV;
   const googleAnalyticsId = env === 'mainnet' ? process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS_ID || '' : '';
   return (
     <html lang="en">
       <body>
-        <Layout headerData={headerData} footerData={footerData}>
-          {children}
-        </Layout>
+        <Layout headerData={headerData}>{children}</Layout>
       </body>
       {googleAnalyticsId && <GoogleAnalytics gaId={googleAnalyticsId} />}
     </html>

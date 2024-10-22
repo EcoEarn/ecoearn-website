@@ -1,0 +1,394 @@
+/* stylelint-disable selector-class-pattern */
+@import '/src/assets/theme/color.scss';
+@import '/src/assets/theme/constants.scss';
+
+.gridModuleWrap {
+  background-image: url('../../../../assets/images/home/bg_dots.png'), url('../../../../assets/images/home/bg_dots.png');
+  background-repeat: no-repeat;
+  background-position: -69px -32px, calc(100% + 223px) calc(100% + 62px);
+  background-size: auto 424px;
+
+  .gridModuleContainer {
+    margin: auto;
+    padding: 100px 0;
+    max-width: $divide-1080;
+
+    .gridTitle {
+      margin-bottom: 47px;
+      font-family: Poppins-Bold, sans-serif;
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 60px;
+      text-align: left;
+      color: $primary-text;
+    }
+
+    .gridModuleItemContainer {
+      position: relative;
+
+      .gridModuleItem {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        height: 334px;
+        border-radius: 24px;
+        overflow: hidden;
+        
+        .gridModuleTitle {
+          padding: 0 36px 46px;
+          color: $white-text;
+          font-family: Poppins-Bold, sans-serif;
+          font-size: 40px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 100%; /* 58px */
+          transition: padding .8s;
+        }
+        
+        .gridModuleDesc {
+          padding: 0 36px;
+          color: $white-text;
+          font-family: Poppins-Regular, sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px; /* 150% */
+          height: 0;
+          transition: height .8s;
+        }
+
+        .gridTitle2 {
+          padding: 0 150px 46px 36px;
+        }
+  
+        .gridDesc1 {
+          width: 68%;
+        }
+      }
+
+      .gridModuleImg1 {
+        position: absolute;
+        right: 10px;
+        top: -18%;
+        width: 46%;
+        height: auto;
+        transition: opacity .8s;
+      }
+
+      .gridModuleImg2 {
+        position: absolute;
+        right: 10px;
+        top: 0;
+        width: 50%;
+        height: auto;
+        transition: opacity .8s;
+      }
+
+      .gridModuleImg3 {
+        position: absolute;
+        right: 76px;
+        top: -2%;
+        width: 44%;
+        height: auto;
+        transition: opacity 0.8s;
+      }
+  
+      &:hover {
+        .gridModuleTitle {
+          padding: 0 36px 22px;
+        }
+
+        .gridModuleDesc {
+          height: 88px;
+        }
+
+        .gridDesc2, .gridDesc3 {
+          height: 108px;
+        }
+
+        .gridModuleImg1 {
+          opacity: .6;
+        }
+
+        .gridModuleImg2, .gridModuleImg3 {
+          opacity: 0;
+        }
+      }
+    }
+
+
+    .gridItem_1 {
+      background-color: $primary-text;
+    }
+
+    .gridItem_2 {
+      background-color: #863DFF;
+    }
+
+    .gridItem_3 {
+      background-color: #CDAFFF;
+    }
+  }
+
+  @media screen and (max-width: $divide-1080) {
+
+    .gridModuleContainer {
+      margin: auto;
+      padding: 100px 0;
+      max-width: $divide-1080;
+  
+      .gridTitle {
+        margin-bottom: 48px;
+        font-size: 60px;
+        font-weight: 700;
+        line-height: 60px;
+        text-align: left;
+        color: $primary-text;
+      }
+  
+      .gridModuleItemContainer {
+        position: relative;
+  
+        .gridModuleItem {
+          height: 303px;
+          border-radius: 24px;
+          
+          .gridModuleTitle {
+            padding: 0 26px 43px;
+            font-size: 37px;
+            transition: padding .8s;
+          }
+          
+          .gridModuleDesc {
+            padding: 0 26px;
+            color: $white-text;
+            line-height: 22px;
+            font-size: 14px;
+          }
+    
+          .gridDesc1 {
+            width: 68%;
+          }
+        }
+  
+        .gridModuleImg1 {
+          position: absolute;
+          right: 10px;
+          top: -18%;
+          width: auto;
+          height: 120%;
+          transition: opacity .8s;
+        }
+  
+        .gridModuleImg2 {
+          position: absolute;
+          right: 0;
+          top: 0;
+          width: 50%;
+          height: auto;
+          transition: opacity .8s;
+        }
+  
+        .gridModuleImg3 {
+          position: absolute;
+          right: 0;
+          top: -2%;
+          width: 50%;
+          height: auto;
+          transition: opacity .8s;
+        }
+    
+        &:hover {
+          .gridModuleTitle {
+            padding: 0 26px 18px;
+          }
+  
+          .gridModuleDesc {
+            height: 64px;
+          }
+  
+          .gridDesc2, .gridDesc3 {
+            height: 82px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $divide-991) {
+    background-image: url('../../../../assets/images/home/bg_dots.png'), url('../../../../assets/images/home/bg_dots.png');
+    background-repeat: no-repeat;
+    background-position: -15px -208px, calc(100% + 27px) calc(100% + 62px);
+    background-size: auto 220px;
+
+    .gridModuleContainer {
+      margin: auto;
+      padding: 71px 0;
+      width: 100%;
+  
+      .gridTitle {
+        margin-bottom: 29px;
+        font-size: 42px;
+        line-height: 42px;
+      }
+  
+      .gridModuleItemContainer {
+        position: relative;
+  
+        .gridModuleItem {
+          height: 235px;
+          border-radius: 24px;
+          
+          .gridModuleTitle {
+            padding: 0 22px 34px;
+            font-size: 28px;
+          }
+          
+          .gridModuleDesc {
+            padding: 0 22px;
+            line-height: 20px;
+            font-size: 12px;
+          }
+
+          .gridTitle2 {
+            width: 50%;
+          }
+
+          .gridTitle3 {
+            width: 74%;
+          }
+    
+          .gridDesc1 {
+            width: 68%;
+          }
+        }
+  
+        .gridModuleImg2 {
+          width: auto;
+          height: 100%;
+        }
+  
+        .gridModuleImg3 {
+          width: auto;
+          height: 100%;
+        }
+    
+        &:hover {
+          .gridModuleTitle {
+            padding: 0 22px 16px;
+          }
+  
+          .gridModuleDesc {
+            height: 52px;
+          }
+  
+          .gridDesc2, .gridDesc3 {
+            height: 60px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: $divide-767) {
+    background-image: url('../../../../assets/images/home/bg_dots.png'), url('../../../../assets/images/home/bg_dots.png');
+    background-repeat: no-repeat;
+    background-position: -130px 392px, calc(100% + 70px) calc(100% - 237px);
+    background-size: auto 225px;
+  
+    .gridModuleContainer {
+      margin: auto;
+      max-width: $divide-767;
+
+      .gridTitle {
+        margin-bottom: 40px;
+        font-size: 28px;
+        line-height: 28px;
+      }
+
+      .gridModuleItemContainer {
+        padding-bottom: 27px;
+        text-align: center;
+
+        .gridModuleItem {
+          height: auto;
+          border-radius: 24px;
+          
+          .gridModuleTitle {
+            margin-bottom: 18px;
+            padding: 0 32px;
+            font-size: 26px;
+            text-align: left;
+          }
+          
+          .gridModuleDesc {
+            padding: 0 36px;
+            font-size: 16px;
+            line-height: 24px; /* 150% */
+            height: auto;
+            transition: none;
+            text-align: left;
+          }
+    
+          .gridDesc1 {
+            width: 100%;
+          }
+        }
+  
+        .gridModuleImg1 {
+          position: relative;
+          right: 0;
+          top: -25px;
+          width: auto;
+          height: 210px;
+          transition: none;
+        }
+  
+        .gridModuleImg2 {
+          position: relative;
+          top: -25px;
+          width: auto;
+          height: 210px;
+          transition: none;
+        }
+  
+        .gridModuleImg3 {
+          position: relative;
+          left: 40%;
+          top: -25px;
+          width: auto;
+          height: 210px;
+          transform: translateX(-50%);
+          transition: none;
+        }
+    
+        &:hover {
+          .gridModuleDesc {
+            height: auto;
+          }
+  
+          .gridModuleImg1, .gridModuleImg2, .gridModuleImg3 {
+            opacity: 1;
+          }
+        }
+      }
+
+      .gridModuleItemContainer1 {
+        background-color: $primary-text;
+        border-radius: 24px;
+      }
+  
+      .gridModuleItemContainer2 {
+        background-color: #863DFF;
+        border-radius: 24px;
+      }
+  
+      .gridModuleItemContainer3 {
+        background-color: #CDAFFF;
+        border-radius: 24px;
+      }
+    }
+  }
+}
+
