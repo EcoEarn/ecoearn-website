@@ -10,6 +10,7 @@ import { Header } from '@/types/global/header';
 import { s3Url } from '@/constants/network';
 import CloseSVG from '../SVGComponents/CloseSVG';
 import Link from 'next/link';
+import { docsEcoearnDomain } from '@/api/constants';
 
 enum HiddenSecondType {
   ALL_HIDDEN = 'none',
@@ -77,17 +78,17 @@ export default function NavHeaderMobileMenu({ isOpen = false, data, callback }: 
         <div className={styles.menuList}>
           <ul>
             <li>
-              <Link className={styles.menuList_link} href="/docs" target="_blank">
+              <Link className={styles.menuList_link} href={docsEcoearnDomain} target="_blank">
                 Docs
               </Link>
             </li>
             <li>
-              <Link className={styles.menuList_link} href="/about" target="_blank">
+              <Link className={styles.menuList_link} href="https://x.com/ecoearn_web3" target="_blank">
                 <img src={require('../../assets/images/Twitter_mobile.png').default.src} alt="" />
               </Link>
             </li>
             <li>
-              <Link className={styles.menuList_link} href="/about" target="_blank">
+              <Link className={styles.menuList_link} href="https://t.me/ecoearn_web3" target="_blank">
                 <img src={require('../../assets/images/Telegram_mobile.png').default.src} alt="" />
               </Link>
             </li>

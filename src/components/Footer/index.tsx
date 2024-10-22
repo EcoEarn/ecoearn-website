@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import styles from './styles.module.scss';
+import { docsEcoearnDomain } from '@/api/constants';
 
 function Footer() {
   return (
@@ -14,25 +15,25 @@ function Footer() {
           />
 
           <div className={styles.footer__content__links}>
-            <Link className={styles.footer__link} href="/about" target="_blank">
+            <Link className={styles.footer__link} href="/terms-of-service" target="_blank">
               Terms of Service
             </Link>
             <div className={styles.divider}></div>
-            <Link className={styles.footer__link} href="/about" target="_blank">
+            <Link className={styles.footer__link} href="/privacy-policy" target="_blank">
               Privacy Policy
             </Link>
             <div className={styles.divider}></div>
-            <Link className={styles.footer__link} href="/docs" target="_blank">
+            <Link className={styles.footer__link} href={docsEcoearnDomain} target="_blank">
               Docs
             </Link>
           </div>
         </div>
 
         <div className={styles.footer__links}>
-          <Link className={styles.footer__out_link} href="/about" target="_blank">
+          <Link className={styles.footer__out_link} href="https://x.com/ecoearn_web3" target="_blank">
             <img src={require('../../assets/images/icon_twitter.png').default.src} alt="" />
           </Link>
-          <Link className={styles.footer__out_link} href="/about" target="_blank">
+          <Link className={styles.footer__out_link} href="https://t.me/ecoearn_web3" target="_blank">
             <img src={require('../../assets/images/icon_telegram.png').default.src} alt="" />
           </Link>
         </div>

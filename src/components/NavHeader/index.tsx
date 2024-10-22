@@ -111,10 +111,10 @@ export default function NavHeader({ className, style, path = ROUTER.DEFAULT, dat
             />
 
             <div className={styles.header__links}>
-              <Link className={styles.header__out_link} href="/about" target="_blank">
+              <Link className={styles.header__out_link} href="https://x.com/ecoearn_web3" target="_blank">
                 <img src={require('../../assets/images/icon_twitter.png').default.src} alt="" />
               </Link>
-              <Link className={styles.header__out_link} href="/about" target="_blank">
+              <Link className={styles.header__out_link} href="https://t.me/ecoearn_web3" target="_blank">
                 <img src={require('../../assets/images/icon_telegram.png').default.src} alt="" />
               </Link>
             </div>
