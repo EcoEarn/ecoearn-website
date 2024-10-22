@@ -89,7 +89,7 @@
   font-weight: 600;
   font-size: 16px;
   height: 45px;
-  border-radius: 34.5px;
+  border-radius: 34.5px !important;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -217,7 +217,7 @@
       width: auto !important;
       font-size: 12px;
       height: 38px;
-      border-radius: 29.475px;
+      border-radius: 29.475px !important;
       padding: 0 22px;
     }
   }
@@ -256,7 +256,7 @@
       width: auto !important;
       font-size: 12px;
       height: 38px;
-      border-radius: 29.475px;
+      border-radius: 29.475px !important;
       padding: 0 22px;
     }
   }

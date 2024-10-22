@@ -2,9 +2,7 @@
 .content {
   margin-left: auto;
   margin-right: auto;
-  padding-left: 2.25rem;
-  padding-right: 2.25rem;
-  padding-bottom: 2.5rem;
+  padding: 3.5px 2.25rem 2.5rem;
 
   @media (min-width: 768px) {
     max-width: 893px; /* md:max-w-[893px] */

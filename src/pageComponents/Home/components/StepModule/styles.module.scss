@@ -64,7 +64,14 @@
     max-width: $divide-1080;
 
     .stepModuleImgWrap {
+      position: relative;
       padding-right: 125px;
+      height: 100%;
+
+      .stepModuleContentWrap {
+        position: sticky;
+        top: 100px;
+      }
 
       .stepModuleTitle {
         color: $primary-text;
@@ -91,6 +98,7 @@
       bottom: 100px;
       width: 274px;
       height: auto;
+      z-index: -1;
     }
 
   }
@@ -268,6 +276,10 @@
       .stepModuleImgWrap {
         padding-right: 0;
         padding-bottom: 160px;
+
+        .stepModuleContentWrap {
+          position: static;
+        }
 
         .stepModuleTitle {
           color: $primary-text;
