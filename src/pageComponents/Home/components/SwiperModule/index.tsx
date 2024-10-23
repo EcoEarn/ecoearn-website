@@ -55,7 +55,7 @@ function SwiperModule() {
             <div className={styles.swiperModuleTabPanes}>
               <div className={styles.swiperModuleTabPaneWrap}>
                 <div className={styles.swiperModuleTabIndicator}>
-                  <p className={styles.swiperModuleTabIndicatorTitle}>{currentPane}</p>
+                  <p className={styles.swiperModuleTabIndicatorTitle}>Point Staking</p>
                 </div>
                 <div className={clsx(styles.swiperModuleTabPane, current === 0 && styles.active)}>
                   <div className={styles.swiperModuleTabPaneContent}>
@@ -83,7 +83,7 @@ function SwiperModule() {
               </div>
               <div className={styles.swiperModuleTabPaneWrap}>
                 <div className={styles.swiperModuleTabIndicator}>
-                  <p className={styles.swiperModuleTabIndicatorTitle}>{currentPane}</p>
+                  <p className={styles.swiperModuleTabIndicatorTitle}>Farm</p>
                 </div>
                 <div className={clsx(styles.swiperModuleTabPane, current === 1 && styles.active)}>
                   <div className={styles.swiperModuleTabPaneContent}>
@@ -110,7 +110,7 @@ function SwiperModule() {
               </div>
               <div className={styles.swiperModuleTabPaneWrap}>
                 <div className={styles.swiperModuleTabIndicator}>
-                  <p className={styles.swiperModuleTabIndicatorTitle}>{currentPane}</p>
+                  <p className={styles.swiperModuleTabIndicatorTitle}>Simple Staking</p>
                 </div>
                 <div className={clsx(styles.swiperModuleTabPane, current === 2 && styles.active)}>
                   <div className={styles.swiperModuleTabPaneContent}>
@@ -138,7 +138,7 @@ function SwiperModule() {
               </div>
               <div className={styles.swiperModuleTabPaneWrap}>
                 <div className={styles.swiperModuleTabIndicator}>
-                  <p className={styles.swiperModuleTabIndicatorTitle}>{currentPane}</p>
+                  <p className={styles.swiperModuleTabIndicatorTitle}>Rewards</p>
                 </div>
                 <div className={clsx(styles.swiperModuleTabPane, current === 3 && styles.active)}>
                   <div className={styles.swiperModuleTabPaneContent}>
