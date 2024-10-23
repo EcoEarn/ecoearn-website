@@ -190,27 +190,13 @@ export default function NavHeader({ className, style, path = ROUTER.DEFAULT, dat
                   </div>
                 );
               })}
-            {data.actionButton?.text && (
-              <div
-                className={styles.linkBtnWrap}
-                onClick={() =>
-                  openWithBlank(data.actionButton?.link.url || '', data.actionButton?.link.target || '_blank')
-                }>
-                <div
-                  className={styles.actionButton}
-                  style={{
-                    backgroundColor: data.actionButton.commonStyles.default.backgroundColor,
-                    borderColor: data.actionButton.commonStyles.default.borderColor,
-                    color: data.actionButton.commonStyles.default.fontColor,
-                    width: data.actionButton.commonStyles.width ? data.actionButton.commonStyles.width + 'px' : 'auto',
-                    borderRadius: 12,
-                    border: 'none',
-                    cursor: 'not-allowed',
-                  }}>
-                  {data.actionButton.text}
-                </div>
-              </div>
-            )}
+            <div
+              className={styles.linkBtnWrap}
+              onClick={() =>
+                openWithBlank(data.actionButton?.link.url || '', data.actionButton?.link.target || '_blank')
+              }>
+              <div className={styles.actionButton}>Launch App</div>
+            </div>
           </div>
         </div>
       </div>

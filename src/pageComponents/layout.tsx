@@ -34,7 +34,7 @@ export default function Layout(props: React.PropsWithChildren<IProps>) {
     <main className="home-page">
       <NavHeader path={ROUTER.DEFAULT} data={headerData} />
 
-      <>{children}</>
+      <div style={{ marginTop: '-80px' }}>{children}</div>
 
       <Footer />
     </main>

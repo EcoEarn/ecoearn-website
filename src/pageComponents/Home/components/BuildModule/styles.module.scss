@@ -28,6 +28,14 @@
       text-align: left;
     }
 
+    .buildModuleLink {
+      height: 54px;
+      font-size: 18px;
+      line-height: 54px;
+      padding: 0 32px;
+      border-radius: 42px;
+    }
+
     .buildModuleContent {
       display: flex;
       flex-direction: row;
@@ -75,6 +83,7 @@
       .buildModuleItem1 {
         background-color: $brand;
         background-image: url('../../../../assets/images/home/build-ai.png');
+        background-position: calc(100% - 20px) 34px;
       }
 
       .buildModuleItem2 {
@@ -136,6 +145,14 @@
         font-size: 55px;
         line-height: 55px;
       }
+
+      .buildModuleLink {
+        height: 50px;
+        font-size: 16px;
+        line-height: 50px;
+        padding: 0 28px;
+        border-radius: 38px;
+      }
   
       .buildModuleContent {
   
@@ -175,6 +192,14 @@
       .buildModuleTitle {
         font-size: 42px;
         line-height: 42px;
+      }
+
+      .buildModuleLink {
+        height: 44px;
+        font-size: 15px;
+        line-height: 44px;
+        padding: 0 24px;
+        border-radius: 34px;
       }
   
       .buildModuleContent {
@@ -221,7 +246,6 @@
       }
   
       .buildModuleContent {
-        padding-left: 20px;
         padding-right: 20px;
         overflow-x: auto;
   
@@ -251,6 +275,7 @@
         margin: 30px auto 0;
 
         .buildModuleLinkBottomLink {
+          padding: 0 21px;
           font-size: 13px;
         }
       }

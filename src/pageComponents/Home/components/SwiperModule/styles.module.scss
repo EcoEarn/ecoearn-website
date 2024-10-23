@@ -67,6 +67,10 @@
             }
           }
         }
+
+        .swiperModuleTabIndicator {
+          display: none;
+        }
       
         .swiperModuleTabPanes {
           position: relative;
@@ -102,6 +106,10 @@
             right: 0;
             bottom: 0;
             padding: 20px;
+
+            img {
+              transition: transform 0.5s ease-in-out;
+            }
           }
 
           .swiperModuleTabPaneImgWrap1 img {
@@ -178,6 +186,10 @@
 
           &:hover {
             background-color: $primary-text;
+            
+            .swiperModuleTabPaneImgWrap img {
+              transform: scale(1.28);
+            }
           }
         }
       }
@@ -332,12 +344,41 @@
             overflow-x: auto;
             align-items: stretch;
           }
+
+          .swiperModuleTabPaneWrap {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: calc(100vw - 60px);
+            height: auto;
+            flex-shrink: 0;
+          }
+
+          .swiperModuleTabIndicator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 34px;
+  
+            .swiperModuleTabIndicatorTitle {
+              padding: 7px 14px;
+              font-family: Poppins-Regular, sans-serif;
+              font-size: 13px;
+              font-weight: 600;
+              line-height: 12.86px;
+              text-align: center;
+              color: $white-text;
+              border-radius: 20.37px;
+              background-color: #1A1A1A;
+            }
+          }
   
           .swiperModuleTabPane {
-            position: inherit;
+            position: relative;
             width: calc(100vw - 60px);
             height: auto;
             gap: 0;
+            flex: 1;
             border-radius: 27.57px;
             background-color: $brand;
             transition: none;
@@ -422,6 +463,14 @@
               font-size: 13px;
               line-height: 17px;
               text-align: left;
+            }
+
+            &:hover {
+              background-color: $brand;
+              
+              .swiperModuleTabPaneImgWrap img {
+                transform: none;
+              }
             }
           }
         }

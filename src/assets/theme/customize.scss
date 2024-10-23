@@ -76,10 +76,12 @@ html {
   line-height: 35px;
   border: 1px solid $brand;
   box-sizing: border-box;
+  transition: background-color 0.3s ease-in-out;
 
   &:hover {
     background-color: $primary-text;
     color: $page-bg;
+    border-color: $primary-text;
   }
 }
 
@@ -95,9 +97,11 @@ html {
   line-height: 35px;
   background-color: $brand;
   box-sizing: border-box;
+  transition: background-color 0.3s ease-in-out;
 
   &:hover {
     background-color: $primary-text;
     color: $page-bg;
+    border-color: $primary-text;
   }
 }
