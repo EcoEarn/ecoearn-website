@@ -50,6 +50,10 @@ function SwiperModule() {
                 onClick={() => setCurrent(3)}>
                 <span className={styles.swiperModuleTabTitle}>Reward</span>
               </div>
+
+              <div
+                className={styles.swiperModuleTabMenuBg}
+                style={{ left: `calc(${current} * (25% - 11.25px) + (${current} + 1) * 9px)` }}></div>
             </div>
 
             <div className={styles.swiperModuleTabPanes}>
@@ -148,7 +152,7 @@ function SwiperModule() {
                     <Row style={{ height: '100%' }}>
                       <Col xs={24} sm={24} md={24} lg={{ span: 14, offset: 10 }}>
                         <div className={styles.swiperModuleTabPaneDescWrap}>
-                          <p className={styles.swiperModuleTabPaneType}>Simple Staking</p>
+                          <p className={styles.swiperModuleTabPaneType}>Rewards</p>
                           <h4 className={styles.swiperModuleTabPaneTitle}>
                             Maximise <br /> Your Earnings
                           </h4>

@@ -5,6 +5,7 @@ import { Col, Row, Steps } from 'antd';
 import type { StepsProps } from 'antd';
 import Link from 'next/link';
 import { AppEcoearnDomain } from '@/api/constants';
+import CountCompo from './components/CountCompo';
 
 const customDot: StepsProps['progressDot'] = (_, { index }) => (
   <span className={styles.defaultDot}>Step {index + 1}</span>
@@ -19,7 +20,7 @@ function StepModule() {
             <div className={styles.stepModuleImgWrap}>
               <div className={styles.stepModuleContentWrap}>
                 <h1 className={styles.stepModuleTitle}>
-                  Earn Reward in <br /> <span className={styles.purple}> 3 </span> Simple Steps
+                  Earn Reward in <br /> <CountCompo className={styles.purple} targetNumber={3} /> Simple Steps
                 </h1>
                 <Link
                   href={AppEcoearnDomain + '/staking'}
