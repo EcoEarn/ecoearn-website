@@ -1,6 +1,9 @@
+/* eslint-disable @next/next/no-img-element */
 import Link from 'next/link';
 import styles from './styles.module.scss';
 import { docsEcoearnDomain } from '@/api/constants';
+import XSVG from '@/assets/images/x_logo.svg';
+import TelegramSVG from '@/assets/images/Telegram.svg';
 
 function Footer() {
   return (
@@ -31,10 +34,10 @@ function Footer() {
 
         <div className={styles.footer__links}>
           <Link className={styles.footer__out_link} href="https://x.com/ecoearn_web3" target="_blank">
-            <img src={require('../../assets/images/icon_twitter.png').default.src} alt="" />
+            <XSVG />
           </Link>
           <Link className={styles.footer__out_link} href="https://t.me/ecoearn_web3" target="_blank">
-            <img src={require('../../assets/images/icon_telegram.png').default.src} alt="" />
+            <TelegramSVG />
           </Link>
         </div>
       </div>
