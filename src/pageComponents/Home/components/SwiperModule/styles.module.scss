@@ -32,12 +32,26 @@
         flex-direction: column;
 
         .swiperModuleTabMenu {
+          position: relative;
           padding: 8px 9px;
           display: flex;
           align-items: center;
           gap: 9px;
           border-radius: 54px;
           background-color: $white-bg;
+
+          .swiperModuleTabMenuBg {
+            position: absolute;
+            left: 0;
+            top: 8px;
+            content: '';
+            width: calc((100% - 45px) / 4);
+            height: calc(100% - 16px);
+            border-radius: 31px;
+            background-color: $brand;
+            z-index: 0;
+            transition: left 0.4s;
+          }
 
           .swiperModuleTabItem {
             min-width: 154px;
@@ -47,6 +61,7 @@
             text-align: center;
             background-color: transparent;
             transition: background-color 0.4s;
+            z-index: 10;
             cursor: pointer;
 
             span {
@@ -59,8 +74,6 @@
             }
 
             &.active {
-              background-color: $brand;
-
               span {
                 color: $white-text;
               }
