@@ -40,6 +40,10 @@
           font-weight: 500;
           line-height: 22px;
           color: #9F9F9F;
+
+          &:hover {
+            color: $brand;
+          }
         }
 
         .divider {
@@ -61,9 +65,10 @@
       .footer__out_link {
         display: inline-block;
 
-        img {
-          width: 24px;
-          height: auto;
+        &:hover {
+          svg path {
+            fill: $primary-text;
+          }
         }
       }
     }
@@ -117,14 +122,8 @@
   
         .footer__out_link {
           display: inline-block;
-  
-          img {
-            width: 24px;
-            height: auto;
-          }
         }
       }
-  
     }
   }
 }
