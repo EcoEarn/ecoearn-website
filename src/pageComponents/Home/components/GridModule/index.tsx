@@ -35,8 +35,8 @@ function BrandModule() {
               <div className={clsx([styles.gridModuleItem, styles.gridItem_2])}>
                 <h4 className={clsx([styles.gridModuleTitle, styles.gridTitle2])}>Flexible Options & High Rewards</h4>
                 <p className={clsx([styles.gridModuleDesc, styles.gridDesc2])}>
-                  Choose your preferred staking options or lock-in periods to suit your needs, and boost your earnings
-                  by inviting others and increasing your stake.
+                  Choose your preferred staking options or stake duration to suit your needs, and boost your earnings by
+                  inviting others and increasing your stake.
                 </p>
               </div>
             </div>

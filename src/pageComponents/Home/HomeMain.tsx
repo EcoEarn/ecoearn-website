@@ -1,6 +1,4 @@
 'use client';
-// import BrandModule from '@/modules/BrandModule';
-import { IHomePageProps } from '@/types/pages/home';
 import { getGlobalConfig } from '@/api/utils';
 import { useCallback } from 'react';
 import { useEffectOnce } from 'react-use';
@@ -12,9 +10,7 @@ import BuildModule from './components/BuildModule';
 import OutroModule from './components/OutroModule';
 import styles from './styles.module.scss';
 
-type IProps = Pick<IHomePageProps, 'pageData'>;
-
-export default function HomeMain({ pageData }: IProps) {
+export default function HomeMain() {
   const setGlobalConfig = useCallback(async () => {
     if (typeof document !== 'undefined') {
       const globalConfig = await getGlobalConfig();

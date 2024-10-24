@@ -23,7 +23,7 @@ function SwiperModule() {
               <div
                 className={clsx(styles.swiperModuleTabItem, current === 1 && styles.active)}
                 onClick={() => setCurrent(1)}>
-                <span className={styles.swiperModuleTabTitle}>Point Staking</span>
+                <span className={styles.swiperModuleTabTitle}>Points Staking</span>
               </div>
               <div
                 className={clsx(styles.swiperModuleTabItem, current === 2 && styles.active)}
@@ -72,7 +72,7 @@ function SwiperModule() {
               </div>
               <div className={styles.swiperModuleTabPaneWrap}>
                 <div className={styles.swiperModuleTabIndicator}>
-                  <p className={styles.swiperModuleTabIndicatorTitle}>Point Staking</p>
+                  <p className={styles.swiperModuleTabIndicatorTitle}>Points Staking</p>
                 </div>
                 <div className={clsx(styles.swiperModuleTabPane, current === 1 && styles.active)}>
                   <div className={styles.swiperModuleTabPaneContent}>
@@ -85,7 +85,7 @@ function SwiperModule() {
                     <Row className={styles.swiperModuleTabPaneContentRow}>
                       <Col xs={24} sm={24} md={{ span: 16, offset: 8 }} lg={{ span: 14, offset: 10 }}>
                         <div className={styles.swiperModuleTabPaneDescWrap}>
-                          <p className={styles.swiperModuleTabPaneType}>Point Staking</p>
+                          <p className={styles.swiperModuleTabPaneType}>Points Staking</p>
                           <h4 className={styles.swiperModuleTabPaneTitle}>Transform engagement into earnings!</h4>
                           <p className={styles.swiperModuleTabPaneDesc}>
                             By participating in dApp activities or making valuable contributions, you earn points that

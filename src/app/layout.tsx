@@ -3,7 +3,7 @@ import '@/styles/globals.scss';
 import { getGlobalConfig } from '@/api/utils';
 import { GoogleAnalytics } from '@next/third-parties/google';
 import Layout from '@/pageComponents/layout';
-import { getFooter, getHeader } from '@/api/utils';
+import { getHeader } from '@/api/utils';
 
 export async function generateMetadata(): Promise<Metadata> {
   const globalConfig = await getGlobalConfig();

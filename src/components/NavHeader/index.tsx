@@ -2,7 +2,7 @@ import clsx from 'clsx';
 import { Popover } from 'antd';
 import CommonImage from '@/components/CommonImage';
 import { NavigationType, ROUTER } from '@/constants/enum';
-import { CSSProperties, useEffect, useMemo, useState } from 'react';
+import { CSSProperties, useEffect, useState } from 'react';
 import styles from './styles.module.scss';
 import NavHeaderMobileMenu from '@/components/NavHeaderMobileMenu';
 import { jumpOrScrollToTop, openWithBlank, switchPage } from '@/utils/router';
@@ -75,13 +75,6 @@ export default function NavHeader({ className, style, path = ROUTER.DEFAULT, dat
       }
     }
   }, [data]);
-
-  const logoWidth = useMemo(() => {
-    if (data.logo?.width && data.logo?.height) {
-      return (Number(data.logo.width) / Number(data.logo.height)) * 32;
-    }
-    return 200;
-  }, [data.logo?.height, data.logo?.width]);
 
   return (
     <header
