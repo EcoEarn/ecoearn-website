@@ -2,25 +2,10 @@
 import clsx from 'clsx';
 import styles from './styles.module.scss';
 import { Col, Row } from 'antd';
-import React, { useMemo, useState } from 'react';
+import React, { useState } from 'react';
 
 function SwiperModule() {
   const [current, setCurrent] = useState(0);
-
-  const currentPane = useMemo(() => {
-    switch (current) {
-      case 0:
-        return 'Simple Staking';
-      case 1:
-        return 'Point Staking';
-      case 2:
-        return 'Farm';
-      case 3:
-        return 'Rewards';
-      default:
-        return 'Point Staking';
-    }
-  }, [current]);
 
   return (
     <section className={clsx([styles.swiperModuleWrap])}>
