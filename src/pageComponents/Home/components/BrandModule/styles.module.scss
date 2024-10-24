@@ -3,17 +3,23 @@
 @import '/src/assets/theme/constants.scss';
 
 .brandModuleWrap {
+  display: flex;
+  align-items: center;
   background-image: url('../../../../assets/images/home/bg_dots.png'), url('../../../../assets/images/home/bg_dots.png');
   background-repeat: no-repeat;
   background-position: -69px calc(100% + 392px), calc(100% + 58px) -194px;
   background-size: auto 424px;
+  height: 100vh;
 
   .brandModuleContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
     position: relative;
     margin: auto;
     width: 100%;
+    height: 100%;
     max-width: $divide-1080;
-    padding: 256px 0 180px;
 
     .brandModulefakeBtn {
       color: #7D48E8;
