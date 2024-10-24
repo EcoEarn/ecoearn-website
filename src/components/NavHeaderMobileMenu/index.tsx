@@ -1,8 +1,8 @@
-import { Button } from 'antd';
+/* eslint-disable @next/next/no-img-element */
 import clsx from 'clsx';
 import CommonImage from '@/components/CommonImage';
 import styles from './styles.module.scss';
-import { jumpOrScrollToTop, openWithBlank, switchPage } from '@/utils/router';
+import { jumpOrScrollToTop } from '@/utils/router';
 import { ROUTER } from '@/constants/enum';
 import { useCallback, useRef, useState } from 'react';
 import { Popup } from 'antd-mobile';
@@ -23,7 +23,7 @@ export type NavHeaderMobileMenuProps = {
 };
 
 export default function NavHeaderMobileMenu({ isOpen = false, data, callback }: NavHeaderMobileMenuProps) {
-  const [menuData, setMenuData] = useState(data.menuList || []);
+  const [, setMenuData] = useState(data.menuList || []);
   const showSecondMenusIndex = useRef<number>(-1);
 
   const onClose = () => {
