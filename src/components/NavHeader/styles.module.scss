@@ -68,11 +68,10 @@
 }
 
 .navSticky {
-  // position: '-webkit-sticky'; // don't effect
-  // position: sticky; // don't effect
-  // top: 0;
-  // z-index: 1;
-  width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  transition: top .5s;
 }
 
 .linkBtnWrap {

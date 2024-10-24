@@ -82,11 +82,7 @@ a {
 
 .home-page {
   height: 100vh;
-  overflow-y: auto;
-  overflow-x: hidden;
-  @media screen and (max-width: $divide-991) {
-    overflow-x: auto;
-  }
+  overflow-y: scroll;
 }
 
 .empty-container {

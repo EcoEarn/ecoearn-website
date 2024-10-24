@@ -21,10 +21,6 @@ function BrandModule() {
   return (
     <section className={clsx(['section-container', styles.brandModuleWrap])}>
       <section className={clsx([styles.brandModuleContainer, styles.brandModule])}>
-        <div className={styles.brandModuleBtns}>
-          <p className={styles.brandModulefakeBtn}>Built on aelf Blockchain</p>
-        </div>
-
         <h1 className={styles.brandModuleTitle}>
           Boost your yield <br /> with <span className={styles.purple}>EcoEarn</span> staking.
         </h1>
