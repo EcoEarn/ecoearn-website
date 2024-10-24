@@ -13,7 +13,7 @@
     margin: auto;
     width: 100%;
     max-width: $divide-1080;
-    padding: 210px 0 180px;
+    padding: 308px 0 180px;
 
     .brandModulefakeBtn {
       color: #7D48E8;
@@ -31,7 +31,7 @@
 
     .brandModuleHeader {
       position: absolute;
-      left: -36px;
+      left: -125px;
       top: 189px;
       width: 125px;
       height: auto;
@@ -47,7 +47,6 @@
     }
 
     .brandModuleTitle {
-      margin-top: 78px;
       color: $primary-text;
       text-align: center;
       font-family: Poppins-Bold, sans-serif;
@@ -94,7 +93,7 @@
 
     .brandModuleContainer {
       max-width: $divide-1080;
-      padding: 200px 20px 128px;
+      padding: 260px 20px 128px;
 
       .brandModuleHeader {
         top: 168px;
@@ -128,7 +127,7 @@
 
     .brandModuleContainer {
       max-width: 100%;
-      padding: 200px 20px 128px;
+      padding: 260px 20px 128px;
 
       .brandModuleHeader {
         top: 128px;
@@ -175,7 +174,7 @@
 
       .brandModuleHeader {
         top: 98px;
-        left: 22px;
+        left: 0;
         width: 90px;
       }
 

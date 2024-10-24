@@ -37,13 +37,13 @@ function SwiperModule() {
               </div>
               <div
                 className={clsx(styles.swiperModuleTabItem, current === 1 && styles.active)}
-                onClick={() => setCurrent(1)}>
-                <span className={styles.swiperModuleTabTitle}>Farm</span>
+                onClick={() => setCurrent(2)}>
+                <span className={styles.swiperModuleTabTitle}>Simple Staking</span>
               </div>
               <div
                 className={clsx(styles.swiperModuleTabItem, current === 2 && styles.active)}
-                onClick={() => setCurrent(2)}>
-                <span className={styles.swiperModuleTabTitle}>Simple Staking</span>
+                onClick={() => setCurrent(1)}>
+                <span className={styles.swiperModuleTabTitle}>Farm</span>
               </div>
               <div
                 className={clsx(styles.swiperModuleTabItem, current === 3 && styles.active)}
@@ -87,36 +87,9 @@ function SwiperModule() {
               </div>
               <div className={styles.swiperModuleTabPaneWrap}>
                 <div className={styles.swiperModuleTabIndicator}>
-                  <p className={styles.swiperModuleTabIndicatorTitle}>Farm</p>
-                </div>
-                <div className={clsx(styles.swiperModuleTabPane, current === 1 && styles.active)}>
-                  <div className={styles.swiperModuleTabPaneContent}>
-                    <div className={clsx(styles.swiperModuleTabPaneImgWrap, styles.swiperModuleTabPaneImgWrap2)}>
-                      <img src={require('../../../../assets/images/home/choose-earn_farm.png').default.src} alt="" />
-                    </div>
-                    <Row style={{ height: '100%' }}>
-                      <Col xs={24} sm={24} md={24} lg={{ span: 14, offset: 10 }}>
-                        <div className={styles.swiperModuleTabPaneDescWrap}>
-                          <p className={styles.swiperModuleTabPaneType}>Farm</p>
-                          <h4 className={styles.swiperModuleTabPaneTitle}>
-                            Harvest Higher <br /> Rewards
-                          </h4>
-                          <p className={styles.swiperModuleTabPaneDesc}>
-                            Dive into the opportunity of DeFi farming by providing liquidity and staking your LP tokens
-                            into the pool. This strategy not only contributes to the liquidity ecosystem but also
-                            enhances your earning potential.
-                          </p>
-                        </div>
-                      </Col>
-                    </Row>
-                  </div>
-                </div>
-              </div>
-              <div className={styles.swiperModuleTabPaneWrap}>
-                <div className={styles.swiperModuleTabIndicator}>
                   <p className={styles.swiperModuleTabIndicatorTitle}>Simple Staking</p>
                 </div>
-                <div className={clsx(styles.swiperModuleTabPane, current === 2 && styles.active)}>
+                <div className={clsx(styles.swiperModuleTabPane, current === 1 && styles.active)}>
                   <div className={styles.swiperModuleTabPaneContent}>
                     <div className={clsx(styles.swiperModuleTabPaneImgWrap, styles.swiperModuleTabPaneImgWrap3)}>
                       <img
@@ -133,6 +106,33 @@ function SwiperModule() {
                             Unstake the potential of your crypto tokens by staking them to earn rewarding returns! The
                             magic lies in time—the longer you commit to staking, the more generous the Annual Percentage
                             Rate (APR) becomes. Dive into staking and watch your assets flourish over time!
+                          </p>
+                        </div>
+                      </Col>
+                    </Row>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.swiperModuleTabPaneWrap}>
+                <div className={styles.swiperModuleTabIndicator}>
+                  <p className={styles.swiperModuleTabIndicatorTitle}>Farm</p>
+                </div>
+                <div className={clsx(styles.swiperModuleTabPane, current === 2 && styles.active)}>
+                  <div className={styles.swiperModuleTabPaneContent}>
+                    <div className={clsx(styles.swiperModuleTabPaneImgWrap, styles.swiperModuleTabPaneImgWrap2)}>
+                      <img src={require('../../../../assets/images/home/choose-earn_farm.png').default.src} alt="" />
+                    </div>
+                    <Row style={{ height: '100%' }}>
+                      <Col xs={24} sm={24} md={24} lg={{ span: 14, offset: 10 }}>
+                        <div className={styles.swiperModuleTabPaneDescWrap}>
+                          <p className={styles.swiperModuleTabPaneType}>Farm</p>
+                          <h4 className={styles.swiperModuleTabPaneTitle}>
+                            Harvest Higher <br /> Rewards
+                          </h4>
+                          <p className={styles.swiperModuleTabPaneDesc}>
+                            Dive into the opportunity of DeFi farming by providing liquidity and staking your LP tokens
+                            into the pool. This strategy not only contributes to the liquidity ecosystem but also
+                            enhances your earning potential.
                           </p>
                         </div>
                       </Col>

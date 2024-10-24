@@ -68,6 +68,7 @@
 
       .stepModuleContentWrap {
         position: sticky;
+        margin-bottom: 246px;
         top: 100px;
         z-index: 10;
       }
@@ -100,9 +101,8 @@
     }
 
     .stepModuleImgBg {
-      position: absolute;
-      left: 0;
-      bottom: 100px;
+      position: sticky;
+      top: 310px;
       width: 190px;
       height: auto;
       z-index: 0;
@@ -213,6 +213,10 @@
       .stepModuleImgWrap {
         position: relative;
         padding-right: 70px;
+
+        .stepModuleContentWrap {
+          margin-bottom: 136px;
+        }
   
         .stepModuleTitle {
           font-size: 34px;
@@ -319,6 +323,7 @@
 
         .stepModuleImgBg {
           position: absolute;
+          top: auto;
           left: auto;
           right: 23px;
           bottom: 15px;
