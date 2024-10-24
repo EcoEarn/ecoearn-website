@@ -83,6 +83,11 @@
     font-size: 18px;
     font-weight: 500;
     line-height: 24px;
+    transition: color 0.2s ease-in-out;
+
+    &:hover {
+      color: $brand;
+    }
   }
 }
 

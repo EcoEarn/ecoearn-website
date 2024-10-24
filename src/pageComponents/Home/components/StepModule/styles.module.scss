@@ -64,11 +64,10 @@
     .stepModuleImgWrap {
       position: relative;
       padding-right: 125px;
-      height: 100%;
 
       .stepModuleContentWrap {
         position: sticky;
-        margin-bottom: 246px;
+        margin-bottom: 215px;
         top: 100px;
         z-index: 10;
       }
@@ -294,6 +293,7 @@
         padding-bottom: 160px;
 
         .stepModuleContentWrap {
+          margin-bottom: 0;
           position: static;
         }
 

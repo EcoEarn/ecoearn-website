@@ -10,11 +10,11 @@ function SwiperModule() {
   const currentPane = useMemo(() => {
     switch (current) {
       case 0:
-        return 'Point Staking';
-      case 1:
-        return 'Farm';
-      case 2:
         return 'Simple Staking';
+      case 1:
+        return 'Point Staking';
+      case 2:
+        return 'Farm';
       case 3:
         return 'Rewards';
       default:
@@ -33,22 +33,22 @@ function SwiperModule() {
               <div
                 className={clsx(styles.swiperModuleTabItem, current === 0 && styles.active)}
                 onClick={() => setCurrent(0)}>
-                <span className={styles.swiperModuleTabTitle}>Point Staking</span>
-              </div>
-              <div
-                className={clsx(styles.swiperModuleTabItem, current === 1 && styles.active)}
-                onClick={() => setCurrent(2)}>
                 <span className={styles.swiperModuleTabTitle}>Simple Staking</span>
               </div>
               <div
-                className={clsx(styles.swiperModuleTabItem, current === 2 && styles.active)}
+                className={clsx(styles.swiperModuleTabItem, current === 1 && styles.active)}
                 onClick={() => setCurrent(1)}>
-                <span className={styles.swiperModuleTabTitle}>Farm</span>
+                <span className={styles.swiperModuleTabTitle}>Point Staking</span>
+              </div>
+              <div
+                className={clsx(styles.swiperModuleTabItem, current === 2 && styles.active)}
+                onClick={() => setCurrent(2)}>
+                <span className={styles.swiperModuleTabTitle}>Farms</span>
               </div>
               <div
                 className={clsx(styles.swiperModuleTabItem, current === 3 && styles.active)}
                 onClick={() => setCurrent(3)}>
-                <span className={styles.swiperModuleTabTitle}>Reward</span>
+                <span className={styles.swiperModuleTabTitle}>Rewards</span>
               </div>
 
               <div
@@ -59,37 +59,9 @@ function SwiperModule() {
             <div className={styles.swiperModuleTabPanes}>
               <div className={styles.swiperModuleTabPaneWrap}>
                 <div className={styles.swiperModuleTabIndicator}>
-                  <p className={styles.swiperModuleTabIndicatorTitle}>Point Staking</p>
-                </div>
-                <div className={clsx(styles.swiperModuleTabPane, current === 0 && styles.active)}>
-                  <div className={styles.swiperModuleTabPaneContent}>
-                    <div className={clsx(styles.swiperModuleTabPaneImgWrap, styles.swiperModuleTabPaneImgWrap1)}>
-                      <img
-                        src={require('../../../../assets/images/home/choose-earn_point_staking.png').default.src}
-                        alt=""
-                      />
-                    </div>
-                    <Row className={styles.swiperModuleTabPaneContentRow}>
-                      <Col xs={24} sm={24} md={{ span: 16, offset: 8 }} lg={{ span: 14, offset: 10 }}>
-                        <div className={styles.swiperModuleTabPaneDescWrap}>
-                          <p className={styles.swiperModuleTabPaneType}>Point Staking</p>
-                          <h4 className={styles.swiperModuleTabPaneTitle}>Transform engagement into earnings!</h4>
-                          <p className={styles.swiperModuleTabPaneDesc}>
-                            By participating in dApp activities or making valuable contributions, you earn points that
-                            can be strategically staked on EcoEarn. This allows you to unlock additional rewards,
-                            enhancing the value of your participation.
-                          </p>
-                        </div>
-                      </Col>
-                    </Row>
-                  </div>
-                </div>
-              </div>
-              <div className={styles.swiperModuleTabPaneWrap}>
-                <div className={styles.swiperModuleTabIndicator}>
                   <p className={styles.swiperModuleTabIndicatorTitle}>Simple Staking</p>
                 </div>
-                <div className={clsx(styles.swiperModuleTabPane, current === 1 && styles.active)}>
+                <div className={clsx(styles.swiperModuleTabPane, current === 0 && styles.active)}>
                   <div className={styles.swiperModuleTabPaneContent}>
                     <div className={clsx(styles.swiperModuleTabPaneImgWrap, styles.swiperModuleTabPaneImgWrap3)}>
                       <img
@@ -115,6 +87,34 @@ function SwiperModule() {
               </div>
               <div className={styles.swiperModuleTabPaneWrap}>
                 <div className={styles.swiperModuleTabIndicator}>
+                  <p className={styles.swiperModuleTabIndicatorTitle}>Point Staking</p>
+                </div>
+                <div className={clsx(styles.swiperModuleTabPane, current === 1 && styles.active)}>
+                  <div className={styles.swiperModuleTabPaneContent}>
+                    <div className={clsx(styles.swiperModuleTabPaneImgWrap, styles.swiperModuleTabPaneImgWrap1)}>
+                      <img
+                        src={require('../../../../assets/images/home/choose-earn_point_staking.png').default.src}
+                        alt=""
+                      />
+                    </div>
+                    <Row className={styles.swiperModuleTabPaneContentRow}>
+                      <Col xs={24} sm={24} md={{ span: 16, offset: 8 }} lg={{ span: 14, offset: 10 }}>
+                        <div className={styles.swiperModuleTabPaneDescWrap}>
+                          <p className={styles.swiperModuleTabPaneType}>Point Staking</p>
+                          <h4 className={styles.swiperModuleTabPaneTitle}>Transform engagement into earnings!</h4>
+                          <p className={styles.swiperModuleTabPaneDesc}>
+                            By participating in dApp activities or making valuable contributions, you earn points that
+                            can be strategically staked on EcoEarn. This allows you to unlock additional rewards,
+                            enhancing the value of your participation.
+                          </p>
+                        </div>
+                      </Col>
+                    </Row>
+                  </div>
+                </div>
+              </div>
+              <div className={styles.swiperModuleTabPaneWrap}>
+                <div className={styles.swiperModuleTabIndicator}>
                   <p className={styles.swiperModuleTabIndicatorTitle}>Farm</p>
                 </div>
                 <div className={clsx(styles.swiperModuleTabPane, current === 2 && styles.active)}>
@@ -125,7 +125,7 @@ function SwiperModule() {
                     <Row style={{ height: '100%' }}>
                       <Col xs={24} sm={24} md={24} lg={{ span: 14, offset: 10 }}>
                         <div className={styles.swiperModuleTabPaneDescWrap}>
-                          <p className={styles.swiperModuleTabPaneType}>Farm</p>
+                          <p className={styles.swiperModuleTabPaneType}>Farms</p>
                           <h4 className={styles.swiperModuleTabPaneTitle}>
                             Harvest Higher <br /> Rewards
                           </h4>
