@@ -2,15 +2,17 @@ import clsx from 'clsx';
 import { Popover } from 'antd';
 import CommonImage from '@/components/CommonImage';
 import { NavigationType, ROUTER } from '@/constants/enum';
-import { CSSProperties, useEffect, useMemo, useState } from 'react';
+import { CSSProperties, useEffect, useState } from 'react';
 import styles from './styles.module.scss';
 import NavHeaderMobileMenu from '@/components/NavHeaderMobileMenu';
 import { jumpOrScrollToTop, openWithBlank, switchPage } from '@/utils/router';
 import MenuArrowSVG from '@/components/SVGComponents/MenuArrowSVG';
 import NavSelectedSVG from '../SVGComponents/NavSelectedSVG';
 import { Header, SecondMenu, TopMenu } from '@/types/global/header';
-import { s3Url } from '@/constants/network';
 import MenuGraySVG from '../SVGComponents/MenuGraySVG';
+import XSVG from '@/assets/images/x_logo.svg';
+import TelegramSVG from '@/assets/images/Telegram.svg';
+import Link from 'next/link';
 
 export interface INavHeaderProps {
   className?: string;
@@ -74,13 +76,6 @@ export default function NavHeader({ className, style, path = ROUTER.DEFAULT, dat
     }
   }, [data]);
 
-  const logoWidth = useMemo(() => {
-    if (data.logo?.width && data.logo?.height) {
-      return (Number(data.logo.width) / Number(data.logo.height)) * 32;
-    }
-    return 200;
-  }, [data.logo?.height, data.logo?.width]);
-
   return (
     <header
       id="website-header"
@@ -92,22 +87,57 @@ export default function NavHeader({ className, style, path = ROUTER.DEFAULT, dat
         className,
       ])}
       style={{ backgroundColor: data.commonStyles?.defaultBackgroundColor, ...style }}>
-      <div className={clsx(['page-container', styles.navHeader])}>
-        <CommonImage
-          quality={100}
-          src={data.logo?.filename_disk ? s3Url + data.logo.filename_disk : ''}
-          style={{ width: logoWidth, height: 32, cursor: 'pointer' }}
-          fill
-          alt="websiteLogo"
-          onClick={() => jumpOrScrollToTop(ROUTER.DEFAULT)}
-          priority
-        />
+      <div className={styles.navHeader}>
+        <div className={styles.header__top}>
+          <div className={styles.menuIcon} style={{ cursor: 'pointer' }} onClick={onOpenMenu}>
+            <MenuGraySVG />
+          </div>
+
+          <div className={styles.logoWrap}>
+            <CommonImage
+              quality={100}
+              src={require(`@/assets/images/logo.png`).default.src}
+              className={styles.logoWarpImg}
+              style={{ width: 106.24, height: 17.87, cursor: 'pointer' }}
+              fill
+              alt="websiteLogo"
+              onClick={() => jumpOrScrollToTop(ROUTER.DEFAULT)}
+              priority
+            />
+
+            <div className={styles.header__links}>
+              <Link className={styles.header__out_link} href="https://x.com/ecoearn_web3" target="_blank">
+                <XSVG />
+              </Link>
+              <Link className={styles.header__out_link} href="https://t.me/ecoearn_web3" target="_blank">
+                <TelegramSVG />
+              </Link>
+            </div>
+          </div>
+        </div>
 
         <NavHeaderMobileMenu isOpen={isOpenMenu} data={data} callback={onCloseMenu} />
 
         <div>
           <div className={styles.menuIcon} style={{ cursor: 'pointer' }} onClick={onOpenMenu}>
-            <MenuGraySVG />
+            {data.actionButton?.text && (
+              <div
+                className={styles.linkBtnWrap}
+                onClick={() =>
+                  openWithBlank(data.actionButton?.link.url || '', data.actionButton?.link.target || '_blank')
+                }>
+                <div
+                  className={styles.actionButton}
+                  style={{
+                    backgroundColor: data.actionButton.commonStyles.default.backgroundColor,
+                    borderColor: data.actionButton.commonStyles.default.borderColor,
+                    color: data.actionButton.commonStyles.default.fontColor,
+                    width: data.actionButton.commonStyles.width ? data.actionButton.commonStyles.width + 'px' : 'auto',
+                  }}>
+                  {data.actionButton.text}
+                </div>
+              </div>
+            )}
           </div>
           <div className={styles.menus}>
             {Array.isArray(menuData) &&
@@ -135,7 +165,12 @@ export default function NavHeader({ className, style, path = ROUTER.DEFAULT, dat
                       </Popover>
                     ) : (
                       <div className={styles.linkBtnWrap} onClick={() => switchPage(item.type, item.path)}>
-                        <div className={clsx(['header-nav-btn', item.path === path ? 'header-nav-btn-select' : ''])}>
+                        <div
+                          className={clsx([
+                            'header-nav-btn',
+                            styles.textLink,
+                            item.path === path ? 'header-nav-btn-select' : '',
+                          ])}>
                           {item.title}
                         </div>
                         {item.path === path && (
@@ -148,24 +183,13 @@ export default function NavHeader({ className, style, path = ROUTER.DEFAULT, dat
                   </div>
                 );
               })}
-            {data.actionButton?.text && (
-              <div
-                className={styles.linkBtnWrap}
-                onClick={() =>
-                  openWithBlank(data.actionButton?.link.url || '', data.actionButton?.link.target || '_blank')
-                }>
-                <div
-                  className={styles.actionButton}
-                  style={{
-                    backgroundColor: data.actionButton.commonStyles.default.backgroundColor,
-                    borderColor: data.actionButton.commonStyles.default.borderColor,
-                    color: data.actionButton.commonStyles.default.fontColor,
-                    width: data.actionButton.commonStyles.width ? data.actionButton.commonStyles.width + 'px' : 'auto',
-                  }}>
-                  {data.actionButton.text}
-                </div>
-              </div>
-            )}
+            <div
+              className={styles.linkBtnWrap}
+              onClick={() =>
+                openWithBlank(data.actionButton?.link.url || '', data.actionButton?.link.target || '_blank')
+              }>
+              <div className={styles.actionButton}>Launch App</div>
+            </div>
           </div>
         </div>
       </div>
