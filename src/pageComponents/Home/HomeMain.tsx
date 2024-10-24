@@ -1,23 +1,16 @@
 'use client';
-import { useUserAgent } from '@/hooks/useUserAgent';
-import BrandModule from '@/modules/BrandModule';
-import { IHomePageProps } from '@/types/pages/home';
-import GraphicTextModule from '@/modules/GraphicTextModule';
-import { ModuleType } from '@/types/modules';
 import { getGlobalConfig } from '@/api/utils';
 import { useCallback } from 'react';
 import { useEffectOnce } from 'react-use';
-import CardListModule from '@/modules/CardListModule';
-import PartnersModule from '@/modules/PartnersModule';
-import FeatureCardModule from '@/modules/FeatureCardModule';
-import InfiniteScrollCarouselModule from '@/modules/InfiniteScrollCarouselModule';
-import { ButtonBelowTextModule } from '@/modules/ButtonBelowText';
+import BrandModule from './components/BrandModule';
+import GridModule from './components/GridModule';
+import StepModule from './components/StepModule';
+import SwiperModule from './components/SwiperModule';
+import BuildModule from './components/BuildModule';
+import OutroModule from './components/OutroModule';
+import styles from './styles.module.scss';
 
-type IProps = Pick<IHomePageProps, 'pageData'>;
-
-export default function HomeMain({ pageData }: IProps) {
-  const uaType = useUserAgent();
-
+export default function HomeMain() {
   const setGlobalConfig = useCallback(async () => {
     if (typeof document !== 'undefined') {
       const globalConfig = await getGlobalConfig();
@@ -37,34 +30,18 @@ export default function HomeMain({ pageData }: IProps) {
   });
 
   return (
-    <>
-      {Array.isArray(pageData?.moduleList) &&
-        pageData?.moduleList?.map((module, index) => {
-          if (module.key === ModuleType.BrandModule) {
-            return (
-              <BrandModule key={pageData.key + '_' + index + '_' + module.key} type={uaType} moduleData={module} />
-            );
-          }
-          if (module.key === ModuleType.GraphicTextModule) {
-            return <GraphicTextModule key={pageData.key + '_' + index + '_' + module.key} module={module} />;
-          }
-          if (module.key === ModuleType.CardListModule) {
-            return <CardListModule key={pageData.key + '_' + index + '_' + module.key} moduleData={module} />;
-          }
-          if (module.key === ModuleType.PartnersModule) {
-            return <PartnersModule key={pageData.key + '_' + index + '_' + module.key} module={module} />;
-          }
-          if (module.key === ModuleType.FeatureCardModule) {
-            return <FeatureCardModule key={pageData.key + '_' + index + '_' + module.key} module={module} />;
-          }
-          if (module.key === ModuleType.InfiniteScrollCarouselModule) {
-            return <InfiniteScrollCarouselModule key={pageData.key + '_' + index + '_' + module.key} module={module} />;
-          }
-          if (module.key === ModuleType.ButtonBelowTextModule) {
-            return <ButtonBelowTextModule key={pageData.key + '_' + index + '_' + module.key} module={module} />;
-          }
-          return <></>;
-        })}
-    </>
+    <div className={styles['home-main']}>
+      <BrandModule />
+
+      <GridModule />
+
+      <StepModule />
+
+      <SwiperModule />
+
+      <BuildModule />
+
+      <OutroModule />
+    </div>
   );
 }

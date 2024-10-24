@@ -25,4 +25,14 @@ module.exports = {
     includePaths: [path.join(__dirname, 'styles')],
   },
   productionBrowserSourceMaps: true,
+  webpack: (config, { webpack }) => {
+    config.module.rules.push({
+      test: /\.svg$/,
+      issuer: {
+        and: [/\.(js|ts)x?$/],
+      },
+      use: ['@svgr/webpack'],
+    });
+    return config;
+  },
 };

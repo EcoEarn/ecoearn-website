@@ -1,0 +1,493 @@
+/* stylelint-disable selector-class-pattern */
+@import '/src/assets/theme/color.scss';
+@import '/src/assets/theme/constants.scss';
+
+.swiperModuleWrap {
+  background-image: url('../../../../assets/images/home/bg_dots.png'), url('../../../../assets/images/home/bg_dots.png');
+  background-repeat: no-repeat;
+  background-position: -69px -379.5px, calc(100% + 56px) calc(100% + 142px);
+  background-size: auto 424px;
+
+  .swiperModuleContainer {
+    margin: auto;
+    padding: 100px 0;
+    max-width: $divide-1080;
+
+    .swiperModuleTitle {
+      margin-bottom: 50px;
+      font-family: Poppins-Bold, sans-serif;
+      font-size: 48px;
+      font-weight: 700;
+      line-height: 48px;
+      text-align: center;
+    }
+
+    .swiperModuleContent {
+
+      .swiperModuleTabs {
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        .swiperModuleTabMenu {
+          position: relative;
+          padding: 8px 9px;
+          display: flex;
+          align-items: center;
+          gap: 9px;
+          border-radius: 54px;
+          background-color: $white-bg;
+
+          .swiperModuleTabMenuBg {
+            position: absolute;
+            left: 0;
+            top: 8px;
+            content: '';
+            width: calc((100% - 45px) / 4);
+            height: calc(100% - 16px);
+            border-radius: 31px;
+            background-color: $brand;
+            z-index: 0;
+            transition: left 0.4s;
+          }
+
+          .swiperModuleTabItem {
+            min-width: 154px;
+            height: 46px;
+            padding: 10px 24px;
+            border-radius: 31px;
+            text-align: center;
+            background-color: transparent;
+            transition: background-color 0.4s;
+            z-index: 10;
+            cursor: pointer;
+
+            span {
+              font-family: Poppins-Regular, sans-serif;
+              font-size: 15px;
+              font-weight: 600;
+              line-height: 26px;
+              text-align: center;
+              color: $secondary-text;
+            }
+
+            &.active {
+              span {
+                color: $white-text;
+              }
+            }
+          }
+        }
+
+        .swiperModuleTabIndicator {
+          display: none;
+        }
+      
+        .swiperModuleTabPanes {
+          position: relative;
+          margin-top: 45px;
+          width: 100%;
+          height: 425px;
+        }
+
+        .swiperModuleTabPane {
+          position: absolute;
+          width: 100%;
+          height: 425px;
+          gap: 0;
+          border-radius: 27.57px;
+          background-color: $brand;
+          transition: opacity 0.5s ease-in-out, visibility 0.5s, background-color 0.5s;
+          opacity: 0;
+          visibility: hidden;
+
+          .swiperModuleTabPaneContent {
+            position: relative;
+            height: 100%;
+
+            .swiperModuleTabPaneContentRow {
+              height: 100%;
+            }
+          }
+
+          .swiperModuleTabPaneImgWrap {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            padding: 20px;
+
+            img {
+              transition: transform 0.5s ease-in-out;
+            }
+          }
+
+          .swiperModuleTabPaneImgWrap1 img {
+            height: 100%;
+            width: auto;
+            margin-top: 40px;
+            margin-left: -30px;
+            transform: scale(1.2);
+          }
+
+          .swiperModuleTabPaneImgWrap2 img {
+            height: 100%;
+            width: auto;
+            margin-top: 40px;
+            transform: scale(1.2);
+          }
+
+          .swiperModuleTabPaneImgWrap3 img {
+            height: 100%;
+            width: auto;
+            margin-top: 40px;
+            margin-left: 10px;
+            transform: scale(1.2);
+          }
+
+          .swiperModuleTabPaneImgWrap4 img {
+            height: 100%;
+            width: auto;
+            margin-top: 40px;
+            margin-left: 60px;
+            transform: scale(1.2);
+          }
+
+          .swiperModuleTabPaneDescWrap {
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            padding: 42px 47px;
+            height: 100%;
+          }
+
+          .swiperModuleTabPaneType {
+            font-family: Poppins-Bold, sans-serif;
+            font-size: 16.54px;
+            line-height: 16.54px;
+            text-align: right;
+            color: $white-text;
+          }
+
+          .swiperModuleTabPaneTitle {
+            margin: 34px 0;
+            font-family: Poppins-Bold, sans-serif;
+            font-size: 42px;
+            line-height: 42px;
+            text-align: right;
+            color: $white-text;
+          }
+
+          .swiperModuleTabPaneDesc {
+            padding-left: 70px;
+            font-family: Poppins-Regular, sans-serif;
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 20px;
+            text-align: right;
+            color: $white-text;
+          }
+
+          &.active {
+            visibility: visible;
+            opacity: 1;
+          }
+
+          &:hover {
+            background-color: $primary-text;
+            
+            .swiperModuleTabPaneImgWrap img {
+              transform: scale(1.28);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: $divide-1080) {
+
+  .swiperModuleWrap {
+    background-image: url('../../../../assets/images/home/bg_dots.png'), url('../../../../assets/images/home/bg_dots.png');
+    background-repeat: no-repeat;
+    background-position: -69px -379.5px, calc(100% + 56px) calc(100% + 142px);
+    background-size: auto 424px;
+  
+    .swiperModuleContainer {
+      padding: 92px 22px;
+      max-width: 100%;
+  
+      .swiperModuleTitle {
+        margin-bottom: 46px;
+        font-size: 44px;
+        line-height: 44px;
+      }
+  
+      .swiperModuleContent {
+  
+        .swiperModuleTabs {
+          .swiperModuleTabPanes {
+            position: relative;
+            margin-top: 41px;
+            height: 390px;
+          }
+  
+          .swiperModuleTabPane {
+            height: 390px;
+  
+            .swiperModuleTabPaneType {
+              font-size: 15px;
+              line-height: 15px;
+            }
+  
+            .swiperModuleTabPaneTitle {
+              margin: 32px 0;
+              font-size: 38.6px;
+              line-height: 38.6px;
+            }
+  
+            .swiperModuleTabPaneDesc {
+              padding-left: 70px;
+              font-size: 14px;
+              line-height: 19px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media screen and (max-width: $divide-991) {
+  .swiperModuleWrap {
+    background-image: url('../../../../assets/images/home/bg_dots.png'), url('../../../../assets/images/home/bg_dots.png');
+    background-repeat: no-repeat;
+    background-position: -15px -175px, calc(100% + 27px) calc(100% + 142px);
+    background-size: auto 220px;
+  
+    .swiperModuleContainer {
+      padding: 71px 22px;
+  
+      .swiperModuleTitle {
+        margin-bottom: 35px;
+        font-size: 34px;
+        line-height: 34px;
+      }
+  
+      .swiperModuleContent {
+  
+        .swiperModuleTabs {
+          .swiperModuleTabPanes {
+            margin-top: 32px;
+            height: 302px;
+          }
+  
+          .swiperModuleTabPane {
+            height: 302px;
+
+            .swiperModuleTabPaneImgWrap img {
+              margin-top: 20px;
+            }
+  
+            .swiperModuleTabPaneType {
+              font-size: 12px;
+              line-height: 12px;
+            }
+  
+            .swiperModuleTabPaneTitle {
+              margin: 24px 0;
+              font-size: 30px;
+              line-height: 30px;
+            }
+  
+            .swiperModuleTabPaneDesc {
+              padding-left: 70px;
+              font-size: 11px;
+              line-height: 14px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: $divide-767) {
+  .swiperModuleWrap {
+    background-image: url('../../../../assets/images/home/bg_dots.png'), url('../../../../assets/images/home/bg_dots.png');
+    background-repeat: no-repeat;
+    background-position: -86px bottom, calc(100% + 28px) -22px;
+    background-size: auto 225px;
+
+    .swiperModuleContainer {
+      padding: 36px 0;
+      max-width: 100%;
+  
+      .swiperModuleTitle {
+        margin-bottom: 32px;
+        font-size: 26px;
+        line-height: 26px;
+      }
+  
+      .swiperModuleContent {
+  
+        .swiperModuleTabs {
+          margin: 0 auto;
+          padding-left: 20px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+  
+          .swiperModuleTabMenu {
+            display: none;
+          }
+        
+          .swiperModuleTabPanes {
+            padding-right: 20px;
+            display: flex;
+            gap: 20px;
+            position: relative;
+            margin-top: 0;
+            width: 100%;
+            height: auto;
+            overflow-x: auto;
+            align-items: stretch;
+          }
+
+          .swiperModuleTabPaneWrap {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            width: calc(100vw - 60px);
+            height: auto;
+            flex-shrink: 0;
+          }
+
+          .swiperModuleTabIndicator {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 34px;
+  
+            .swiperModuleTabIndicatorTitle {
+              padding: 7px 14px;
+              font-family: Poppins-Regular, sans-serif;
+              font-size: 13px;
+              font-weight: 600;
+              line-height: 12.86px;
+              text-align: center;
+              color: $white-text;
+              border-radius: 20.37px;
+              background-color: #1A1A1A;
+            }
+          }
+  
+          .swiperModuleTabPane {
+            position: relative;
+            width: calc(100vw - 60px);
+            height: auto;
+            gap: 0;
+            flex: 1;
+            border-radius: 27.57px;
+            background-color: $brand;
+            transition: none;
+            opacity: 1;
+            visibility: visible;
+            flex-shrink: 0;
+  
+            .swiperModuleTabPaneContent {
+              display: flex;
+              flex-direction: column;
+              justify-content: space-between;
+              position: relative;
+              height: 100%;
+
+              .swiperModuleTabPaneContentRow {
+                height: auto;
+              }
+            }
+  
+            .swiperModuleTabPaneImgWrap {
+              position: inherit;
+              top: 0;
+              left: 0;
+              right: 0;
+              bottom: 0;
+              text-align: center;
+              padding: 20px 20px 10px;
+            }
+  
+            .swiperModuleTabPaneImgWrap1 img {
+              width: auto;
+              height: 210px;
+              margin: 0 auto;
+              transform: none;
+            }
+  
+            .swiperModuleTabPaneImgWrap2 img {
+              width: auto;
+              height: 210px;
+              margin: 0 auto;
+              transform: none;
+            }
+  
+            .swiperModuleTabPaneImgWrap3 img {
+              width: auto;
+              height: 210px;
+              margin: 0 auto;
+              transform: none;
+            }
+  
+            .swiperModuleTabPaneImgWrap4 img {
+              width: auto;
+              height: 210px;
+              margin: 0 auto;
+              transform: none;
+            }
+  
+            .swiperModuleTabPaneDescWrap {
+              display: flex;
+              flex-direction: column;
+              justify-content: flex-start;
+              align-items: flex-start;
+              padding: 0 26px 24px;
+              height: 100%;
+            }
+  
+            .swiperModuleTabPaneType {
+              font-size: 16.54px;
+              line-height: 13px;
+              text-align: left;
+            }
+  
+            .swiperModuleTabPaneTitle {
+              margin: 18px 0;
+              font-size: 26px;
+              line-height: 26px;
+              text-align: left;
+            }
+  
+            .swiperModuleTabPaneDesc {
+              padding-left: 0;
+              font-size: 13px;
+              line-height: 17px;
+              text-align: left;
+            }
+
+            &:hover {
+              background-color: $brand;
+              
+              .swiperModuleTabPaneImgWrap img {
+                transform: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

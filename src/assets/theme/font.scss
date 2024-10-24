@@ -10,3 +10,19 @@
   font-weight: 400;
   font-family: Roboto-Regular, PingFangSC-Regular, PingFang SC, sans-serif;
 }
+
+/** Poppins-Bold */
+@font-face {
+  font-family: 'Poppins-Bold';
+  src: url('../fonts/Poppins-Bold.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/** Poppins-Regular */
+@font-face {
+  font-family: 'Poppins-Regular';
+  src: url('../fonts/Poppins-Light.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}

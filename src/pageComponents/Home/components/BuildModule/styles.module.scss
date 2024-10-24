@@ -1,0 +1,293 @@
+/* stylelint-disable selector-class-pattern */
+@import '/src/assets/theme/color.scss';
+@import '/src/assets/theme/constants.scss';
+
+.buildModuleWrap {
+  background-image: url('../../../../assets/images/home/bg_dots.png'), url('../../../../assets/images/home/bg_dots.png');
+  background-repeat: no-repeat;
+  background-position: -69px calc(100% + 183px), calc(100% + 56px) -337.5px;
+  background-size: auto 424px;
+
+  .buildModuleContainer {
+    margin: auto;
+    padding: 100px 0;
+    max-width: $divide-1080;
+
+    .buildModuleHeader {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      margin-bottom: 50px;
+    }
+
+    .buildModuleTitle {
+      font-family: Poppins-Bold, sans-serif;
+      font-size: 60px;
+      font-weight: 700;
+      line-height: 60px;
+      text-align: left;
+    }
+
+    .buildModuleLink {
+      height: 54px;
+      font-size: 18px;
+      line-height: 54px;
+      padding: 0 32px;
+      border-radius: 42px;
+    }
+
+    .buildModuleContent {
+      display: flex;
+      flex-direction: row;
+      gap: 15px;
+
+      .buildModuleWrapItem {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-end;
+        padding: 26px;
+        height: 312px;
+        border-radius: 24px;
+        background-size: 56% auto;
+        background-repeat: no-repeat;
+        background-position: calc(100% - 20px) 20px;
+        transition: background-color 0.3s ease;
+
+        .buildModuleWrapItemTitle {
+          margin-bottom: 15px;
+          color: $white-text;
+          font-family: Poppins-Bold, sans-serif;
+          font-size: 26px;
+          font-weight: 700;
+          line-height: 26px;
+          text-align: left;
+        }
+
+        .buildModuleWrapItemDesc {
+          font-family: Poppins-Regular, sans-serif;
+          color: $white-text;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 20px;
+          text-align: left;
+          opacity: .75;
+        }
+
+        &:hover {
+          background-color: $primary-text;
+        }
+      }
+
+      .buildModuleItem1 {
+        background-color: $brand;
+        background-image: url('../../../../assets/images/home/build-ai.png');
+        background-position: calc(100% - 20px) 34px;
+      }
+
+      .buildModuleItem2 {
+        background-color: #B88EFF;
+        background-image: url('../../../../assets/images/home//build-gas.png');
+      }
+
+      .buildModuleItem3 {
+        background-color: #6434C6;
+        background-image: url('../../../../assets/images/home/build-architecture.png');
+      }
+    }
+
+    .buildModuleLinkBottom {
+      display: none;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .buildModuleFooter {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 50px;
+      gap: 24px;
+
+      .buildModuleFooterItem {
+        &:hover {
+          svg g {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .buildModuleFooterMobile {
+      display: none;
+    }
+  }
+}
+@media screen and (max-width: $divide-1080) {
+
+  .buildModuleWrap {
+    background-image: url('../../../../assets/images/home/bg_dots.png'), url('../../../../assets/images/home/bg_dots.png');
+    background-repeat: no-repeat;
+    background-position: -69px calc(100% + 183px), calc(100% + 56px) -337.5px;
+    background-size: auto 424px;
+  
+    .buildModuleContainer {
+      margin: auto;
+      padding: 92px 22px 0;
+      max-width: 100%;
+  
+      .buildModuleHeader {
+        margin-bottom: 46px;
+      }
+  
+      .buildModuleTitle {
+        font-size: 55px;
+        line-height: 55px;
+      }
+
+      .buildModuleLink {
+        height: 50px;
+        font-size: 16px;
+        line-height: 50px;
+        padding: 0 28px;
+        border-radius: 38px;
+      }
+  
+      .buildModuleContent {
+  
+        .buildModuleWrapItem {
+          height: 287px;
+  
+          .buildModuleWrapItemTitle {
+            margin-bottom: 14px;
+            font-size: 24px;
+            line-height: 24px;
+          }
+  
+          .buildModuleWrapItemDesc {
+            font-size: 13px;
+            line-height: 18px;
+          }
+        }
+      }
+  
+    }
+  }
+}
+@media screen and (max-width: $divide-991) {
+  .buildModuleWrap {
+    background-image: url('../../../../assets/images/home/bg_dots.png'), url('../../../../assets/images/home/bg_dots.png');
+    background-repeat: no-repeat;
+    background-position: -15px calc(100% + 79px), calc(100% + 27px) -78px;
+    background-size: auto 220px;
+  
+    .buildModuleContainer {
+      padding: 71px 22px 0;
+  
+      .buildModuleHeader {
+        margin-bottom: 35px;
+      }
+  
+      .buildModuleTitle {
+        font-size: 42px;
+        line-height: 42px;
+      }
+
+      .buildModuleLink {
+        height: 44px;
+        font-size: 15px;
+        line-height: 44px;
+        padding: 0 24px;
+        border-radius: 34px;
+      }
+  
+      .buildModuleContent {
+  
+        .buildModuleWrapItem {
+          padding: 20px;
+          height: 222px;
+  
+          .buildModuleWrapItemTitle {
+            margin-bottom: 11px;
+            font-size: 16px;
+            line-height: 16px;
+          }
+  
+          .buildModuleWrapItemDesc {
+            font-size: 10px;
+            line-height: 14px;
+          }
+        }
+      }
+  
+    }
+  }
+}
+
+@media screen and (max-width: $divide-767) {
+
+  .buildModuleWrap {
+    background: none;
+    .buildModuleContainer {
+      max-width: 100%;
+  
+      .buildModuleTitle {
+        font-size: 26px;
+        line-height: 26px;
+      }
+
+      .buildModuleLink {
+        display: none;
+      }
+  
+      .buildModuleContent {
+        padding-right: 20px;
+        overflow-x: auto;
+  
+        .buildModuleWrapItem {
+          flex: auto;
+          flex-shrink: 0;
+          padding: 24px;
+          width: 254px;
+          height: 239px;
+          border-radius: 15px;
+  
+          .buildModuleWrapItemTitle {
+            margin-bottom: 9px;
+            font-size: 16px;
+            line-height: 16px;
+          }
+  
+          .buildModuleWrapItemDesc {
+            font-size: 13px;
+            line-height: 17px;
+          }
+        }
+      }
+
+      .buildModuleLinkBottom {
+        display: flex;
+        margin: 30px auto 0;
+
+        .buildModuleLinkBottomLink {
+          padding: 0 21px;
+          font-size: 13px;
+        }
+      }
+
+      .buildModuleFooter {
+        display: none;
+      }
+
+      .buildModuleFooterMobile {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 50px;
+        gap: 0;
+      }
+
+    }
+  }
+}

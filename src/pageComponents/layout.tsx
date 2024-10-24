@@ -1,16 +1,18 @@
 'use client';
-import NavFooter from '@/components/NavFooter';
 import NavHeader from '@/components/NavHeader';
 import { ROUTER } from '@/constants/enum';
 import { IHomePageProps } from '@/types/pages/home';
 import { getGlobalConfig } from '@/api/utils';
-import { useCallback } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { useEffectOnce } from 'react-use';
+import Footer from '@/components/Footer';
 
-type IProps = Pick<IHomePageProps, 'headerData' | 'footerData'>;
+type IProps = Pick<IHomePageProps, 'headerData'>;
 
 export default function Layout(props: React.PropsWithChildren<IProps>) {
-  const { headerData, footerData, children } = props;
+  const { headerData, children } = props;
+  const [showHeader, setShowHeader] = useState(true);
+  const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 
   const setGlobalConfig = useCallback(async () => {
     if (typeof document !== 'undefined') {
@@ -30,14 +32,42 @@ export default function Layout(props: React.PropsWithChildren<IProps>) {
     setGlobalConfig();
   });
 
+  useEffect(() => {
+    let lastScrollPosition = 0;
+    const scrollContainer = scrollContainerRef.current;
+
+    const handleScroll = () => {
+      if (scrollContainer) {
+        const position = scrollContainer.scrollTop;
+
+        if (lastScrollPosition > position) {
+          setShowHeader(true);
+        } else {
+          setShowHeader(false);
+        }
+
+        lastScrollPosition = position;
+      }
+    };
+
+    if (scrollContainer) {
+      scrollContainer.addEventListener('scroll', handleScroll);
+    }
+
+    return () => {
+      if (scrollContainer) {
+        scrollContainer.removeEventListener('scroll', handleScroll);
+      }
+    };
+  }, []);
+
   return (
-    <main className="home-page">
-      <NavHeader path={ROUTER.DEFAULT} data={headerData} />
-      <div className="empty-container" style={{ height: 80 }}></div>
+    <main className="home-page" ref={scrollContainerRef}>
+      <NavHeader path={ROUTER.DEFAULT} data={headerData} style={{ top: !showHeader ? '-80px' : '0' }} />
 
-      <>{children}</>
+      <div style={{ marginTop: '-80px' }}>{children}</div>
 
-      <NavFooter data={footerData} />
+      <Footer />
     </main>
   );
 }
