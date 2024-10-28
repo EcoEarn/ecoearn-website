@@ -139,7 +139,7 @@ export default function NavHeader({ className, style, path = ROUTER.DEFAULT, dat
                     {item.type === NavigationType.NOT_JUMP && item?.children?.length > 0 ? (
                       <Popover
                         content={secondMenuList(item.children)}
-                        trigger={['hover', 'click']}
+                        trigger={['click']}
                         placement="bottom"
                         overlayClassName={styles.secondMenus}
                         onOpenChange={(open) => showSecondMenus(idx, open)}>
