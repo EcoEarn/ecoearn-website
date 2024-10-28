@@ -205,10 +205,14 @@
       font-weight: 500;
       font-family: Poppins-Regular, sans-serif;
       font-size: 18px;
-      color: $primary-text;
+      color: #000;
       border-radius: 2px;
       margin-bottom: 4px;
       cursor: pointer;
+
+      svg path {
+        fill: $primary-text;
+      }
 
       &:hover {
         color: $brand;
