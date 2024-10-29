@@ -6,7 +6,10 @@
 @import '/src/assets/theme/constants.scss';
 
 .navHeaderMobileMenuBody {
-  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 64%;
   padding: 24px;
   background-color: var(--pageBg) !important;
 }
@@ -16,7 +19,10 @@
 }
 
 .menusWrap {
-  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1;
   overflow-y: auto;
   overscroll-behavior-y: contain !important;
 
@@ -24,13 +30,20 @@
     padding: 15px;
 
     ul li {
-      padding: 14px 0;
+      padding: 16px 0;
+    }
+
+    .divider {
+      height: 1px;
+      background-color: #E1E1E1;
     }
 
     .menuList_link {
-      display: block;
+      display: flex;
+      align-items: center;
+      gap: 14px;
       height: 24px;
-      color: #070A26;
+      color: #000;
       font-family: Poppins-Regular, sans-serif;
       font-size: 18px;
       font-weight: 500;
@@ -39,8 +52,8 @@
       
 
       img {
-        width: auto;
-        height: 24px
+        width: 24px;
+        height: auto;
       }
     }
   }

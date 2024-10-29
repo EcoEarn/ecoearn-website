@@ -53,6 +53,7 @@ export default function NavHeader({ className, style, path = ROUTER.DEFAULT, dat
               key={`HeaderSecondMenu-${item.title}-${index}`}
               onClick={() => switchPage(item.type, item.path)}
               className={styles.secondMenuItem}>
+              {item.title?.includes('Twitter') ? <XSVG /> : <TelegramSVG />}
               {item.title}
             </div>
           );
@@ -104,15 +105,6 @@ export default function NavHeader({ className, style, path = ROUTER.DEFAULT, dat
               onClick={() => jumpOrScrollToTop(ROUTER.DEFAULT)}
               priority
             />
-
-            <div className={styles.header__links}>
-              <Link className={styles.header__out_link} href="https://x.com/ecoearn_web3" target="_blank">
-                <XSVG />
-              </Link>
-              <Link className={styles.header__out_link} href="https://t.me/ecoearn_web3" target="_blank">
-                <TelegramSVG />
-              </Link>
-            </div>
           </div>
         </div>
 

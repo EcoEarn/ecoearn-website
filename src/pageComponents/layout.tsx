@@ -6,11 +6,12 @@ import { getGlobalConfig } from '@/api/utils';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useEffectOnce } from 'react-use';
 import Footer from '@/components/Footer';
+import NavFooter from '@/components/NavFooter';
 
-type IProps = Pick<IHomePageProps, 'headerData'>;
+type IProps = Pick<IHomePageProps, 'headerData' | 'footerData'>;
 
 export default function Layout(props: React.PropsWithChildren<IProps>) {
-  const { headerData, children } = props;
+  const { headerData, footerData, children } = props;
   const [showHeader, setShowHeader] = useState(true);
   const scrollContainerRef = useRef<HTMLDivElement | null>(null);
 
@@ -67,7 +68,7 @@ export default function Layout(props: React.PropsWithChildren<IProps>) {
 
       <div style={{ marginTop: '-80px' }}>{children}</div>
 
-      <Footer />
+      <NavFooter data={footerData} />
     </main>
   );
 }
