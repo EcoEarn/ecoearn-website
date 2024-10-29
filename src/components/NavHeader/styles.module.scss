@@ -37,9 +37,9 @@
 
 .logoWarpImg {
   width: 150px !important;
-  height: 25.23px !important;
+  height: 26px !important;
   img {
-    width: 150px !important;
+    width: auto !important;
     height: 25.23px !important;
   }
 }
@@ -196,14 +196,14 @@
     }
   }
   .secondMenuList {
-    padding: 9px;
-    width: 188px;
+    padding: 9px 7px;
+    width: 178px;
     .secondMenuItem {
       display: flex;
       align-items: center;
       gap: 14px;
       width: 100%;
-      padding: 6px 14px;
+      padding: 6px 11px;
       font-weight: 500;
       font-family: Poppins-Regular, sans-serif;
       font-size: 18px;
@@ -251,7 +251,7 @@
     width: 106px !important;
     height: 17.87px !important;
     img {
-      width: 106px !important;
+      width: auto !important;
       height: 17.87px !important;
     }
   }
