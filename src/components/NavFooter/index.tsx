@@ -1,13 +1,16 @@
+/* eslint-disable @next/next/no-img-element */
 import clsx from 'clsx';
 import CommonImage from '@/components/CommonImage';
 import { NavigationType, ROUTER } from '@/constants/enum';
-import LinkForBlank from '@/components/LinkForBlank';
 import { CSSProperties, useCallback, useEffect, useMemo, useState } from 'react';
 import { jumpOrScrollToTop, switchPage } from '@/utils/router';
-import { getFullYear } from '@/utils/time';
 import styles from './styles.module.scss';
 import { s3Url } from '@/constants/network';
 import { Footer } from '@/types/global/footer';
+import XSVG from '@/assets/images/x_logo.svg';
+import TelegramSVG from '@/assets/images/Telegram.svg';
+import SmallXSVG from '@/assets/images/x_logo_s.svg';
+import SmallTelegramSVG from '@/assets/images/telegram_s.svg';
 
 export interface INavFooter {
   className?: string;
@@ -73,6 +76,7 @@ export default function NavFooter({ className, style, footerMediaClassName, data
               className={styles.logo}
               onClick={() => jumpOrScrollToTop(ROUTER.DEFAULT)}
             />
+            <img src={require('@/assets/images/logo_small.png').default.src} className={styles.mobileLogo} alt="" />
             <div className={styles.footerDescription}>{data.description}</div>
           </div>
 
@@ -89,61 +93,25 @@ export default function NavFooter({ className, style, footerMediaClassName, data
                             key={'FooterSecondMenu-' + v.title + k}
                             className={styles.secondMenus}
                             onClick={() => switchPage(v.type, v.path)}>
-                            {v.title}
+                            {v.title?.includes('Twitter') ? (
+                              <>
+                                <XSVG className={styles.secondMenuItemIcon} />
+                                <SmallXSVG className={styles.secondMenuItemMIcon} />
+                              </>
+                            ) : null}
+                            {v.title?.includes('TG') ? (
+                              <>
+                                <TelegramSVG className={styles.secondMenuItemIcon} />
+                                <SmallTelegramSVG className={styles.secondMenuItemMIcon} />
+                              </>
+                            ) : null}
+                            <span>{v.title}</span>
                           </div>
                         );
                       })}
                   </div>
                 );
               })}
-          </div>
-        </div>
-        <div
-          className={clsx([styles.footerMedia, footerMediaClassName])}
-          style={{ borderTopColor: data.commonStyles?.dividingLineColor }}>
-          <div className="flex-row-center">
-            {socialMediaData?.map((item, index) => {
-              return (
-                <div
-                  key={'FooterSocialMedia-' + item.name + index}
-                  onMouseOver={() => showActiveMedia(index)}
-                  onMouseOut={() => showActiveMedia(-1)}
-                  className="flex-row-center">
-                  <LinkForBlank
-                    href={item.link}
-                    className={styles.iconBase}
-                    ariaLabel={item.name}
-                    element={
-                      <div style={{ position: 'relative' }}>
-                        <CommonImage
-                          src={item?.activeSvg?.filename_disk ? s3Url + item?.activeSvg?.filename_disk : ''}
-                          style={{
-                            width: 24,
-                            height: 24,
-                            opacity: item?.isActive ? 1 : 0,
-                            position: 'absolute',
-                            top: 0,
-                          }}
-                          width={24}
-                          height={24}
-                          alt=""
-                        />
-                        <CommonImage
-                          src={item?.svg?.filename_disk ? s3Url + item?.svg?.filename_disk : ''}
-                          style={{ width: 24, height: 24, opacity: item?.isActive ? 0 : 1 }}
-                          alt=""
-                          width={24}
-                          height={24}
-                        />
-                      </div>
-                    }
-                  />
-                </div>
-              );
-            })}
-          </div>
-          <div className={styles.footerPower}>
-            {data.powerName.text}@{getFullYear()}
           </div>
         </div>
       </div>

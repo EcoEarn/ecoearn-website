@@ -100,7 +100,7 @@ function SwiperModule() {
               </div>
               <div className={styles.swiperModuleTabPaneWrap}>
                 <div className={styles.swiperModuleTabIndicator}>
-                  <p className={styles.swiperModuleTabIndicatorTitle}>Farm</p>
+                  <p className={styles.swiperModuleTabIndicatorTitle}>Farms</p>
                 </div>
                 <div className={clsx(styles.swiperModuleTabPane, current === 2 && styles.active)}>
                   <div className={styles.swiperModuleTabPaneContent}>

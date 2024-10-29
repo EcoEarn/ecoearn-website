@@ -10,7 +10,7 @@ import { Header } from '@/types/global/header';
 import { s3Url } from '@/constants/network';
 import CloseSVG from '../SVGComponents/CloseSVG';
 import Link from 'next/link';
-import { docsEcoearnDomain } from '@/api/constants';
+import { AppEcoearnDomain, docsEcoearnDomain } from '@/api/constants';
 
 enum HiddenSecondType {
   ALL_HIDDEN = 'none',
@@ -78,18 +78,36 @@ export default function NavHeaderMobileMenu({ isOpen = false, data, callback }: 
         <div className={styles.menuList}>
           <ul>
             <li>
+              <Link className={styles.menuList_link} href={AppEcoearnDomain + '/staking'} target="_blank">
+                Staking
+              </Link>
+            </li>
+            <div className={styles.divider}></div>
+            <li>
               <Link className={styles.menuList_link} href={docsEcoearnDomain} target="_blank">
                 Docs
               </Link>
             </li>
+          </ul>
+        </div>
+        <div className={styles.menuList}>
+          <ul>
             <li>
               <Link className={styles.menuList_link} href="https://x.com/ecoearn_web3" target="_blank">
                 <img src={require('../../assets/images/Twitter_mobile.png').default.src} alt="" />
+                <span>X（Twitter）</span>
               </Link>
             </li>
             <li>
               <Link className={styles.menuList_link} href="https://t.me/ecoearn_web3" target="_blank">
                 <img src={require('../../assets/images/Telegram_mobile.png').default.src} alt="" />
+                <span>TG Channel</span>
+              </Link>
+            </li>
+            <li>
+              <Link className={styles.menuList_link} href="https://t.me/ecoearnx" target="_blank">
+                <img src={require('../../assets/images/Telegram_mobile.png').default.src} alt="" />
+                <span>TG Group</span>
               </Link>
             </li>
           </ul>
