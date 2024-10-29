@@ -156,6 +156,7 @@
     }
 
     &:hover {
+      color: $brand;
       svg path {
         fill: var(--firstMenuFontHoverColor);
       }
@@ -170,9 +171,10 @@
 }
 
 .secondMenus {
+  top: 62px !important;
   :global {
     .ant-popover-arrow {
-      top: 1px;
+      top: 1px !important;
     }
     .ant-popover-arrow-content {
       box-sizing: content-box;
@@ -194,8 +196,8 @@
     }
   }
   .secondMenuList {
-    padding: 9px 14px;
-    width: 198px;
+    padding: 9px;
+    width: 188px;
     .secondMenuItem {
       display: flex;
       align-items: center;
