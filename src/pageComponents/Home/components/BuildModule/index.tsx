@@ -44,7 +44,7 @@ function BuildModule() {
               Architecture
             </h4>
             <p className={styles.buildModuleWrapItemDesc}>
-              Modular design offers a tailored development environment via custom sidechains.
+              Modular design offers a tailored development environment via custom aelf dAppChains.
             </p>
           </div>
         </div>
