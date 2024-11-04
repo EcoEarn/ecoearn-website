@@ -12,7 +12,7 @@ export const BackEndNetWorkMap: Record<string, WebsiteNetworkConfig> = {
       s3Url: '',
     },
     test: {
-      cmsUrl: 'https://testcms.ecoearn.io/',
+      cmsUrl: 'https://cms.ecoearn.cc/',
       s3Url: 'https://ecoearn-test.s3.ap-northeast-1.amazonaws.com/',
     },
     mainnet: {
